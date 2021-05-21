@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UTN.Winform.Funeraria.UI;
 
-namespace Funeraria
-{
-    static class Program
+static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +15,12 @@ namespace Funeraria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+        frmLogin ofrmLogin = new frmLogin();
+        ofrmLogin.ShowDialog();
+
+            if (ofrmLogin.DialogResult == DialogResult.OK)
+                Application.Run(new frmLogin());
         }
     }
-}
+    
+

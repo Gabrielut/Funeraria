@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Funeraria.Entities
+namespace UTN.Winform.Funeraria.Layers.Entities
 {
     class Rol
     {
+        public int IDRol { get; set; }
+
+        public string Descripcion { get; set; }
+
+        public bool Estado { get; set; }
     }
 }

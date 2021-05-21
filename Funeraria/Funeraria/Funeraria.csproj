@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D63F95E2-F09A-476E-9CB1-7E519127FE24}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Funeraria</RootNamespace>
-    <AssemblyName>Funeraria</AssemblyName>
+    <RootNamespace>UTN.Winform.Funeraria</RootNamespace>
+    <AssemblyName>appFuneraria</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layers\Entities\Barrio.cs" />
+    <Compile Include="Layers\Entities\Canton.cs" />
+    <Compile Include="Layers\Entities\Convenios.cs" />
+    <Compile Include="Layers\Entities\DireccionCompleta.cs" />
+    <Compile Include="Layers\Entities\Distrito.cs" />
+    <Compile Include="Layers\Entities\Funerarias.cs" />
+    <Compile Include="Layers\Entities\Provincia.cs" />
     <Compile Include="Layers\Entities\Rol.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
     <Compile Include="UI\frmLogin.cs">
@@ -72,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
