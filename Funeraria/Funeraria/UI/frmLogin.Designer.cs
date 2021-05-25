@@ -1,6 +1,6 @@
-﻿namespace Funeraria
+﻿namespace UTN.Winform.Funeraria.UI
 {
-    partial class Form1
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRecuperarContrasena = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
@@ -39,8 +41,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnRecuperarContrasena = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 518);
             this.panel1.TabIndex = 9;
+            // 
+            // btnRecuperarContrasena
+            // 
+            this.btnRecuperarContrasena.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRecuperarContrasena.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarContrasena.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperarContrasena.Location = new System.Drawing.Point(197, 352);
+            this.btnRecuperarContrasena.Name = "btnRecuperarContrasena";
+            this.btnRecuperarContrasena.Size = new System.Drawing.Size(138, 23);
+            this.btnRecuperarContrasena.TabIndex = 10;
+            this.btnRecuperarContrasena.Text = "Recuperar Contraseña";
+            this.btnRecuperarContrasena.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Location = new System.Drawing.Point(90, 335);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 2);
+            this.panel4.TabIndex = 9;
             // 
             // panel3
             // 
@@ -119,6 +139,7 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblUsuario
             // 
@@ -148,27 +169,7 @@
             this.panel2.Size = new System.Drawing.Size(1300, 33);
             this.panel2.TabIndex = 10;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gray;
-            this.panel4.Location = new System.Drawing.Point(90, 335);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 2);
-            this.panel4.TabIndex = 9;
-            // 
-            // btnRecuperarContrasena
-            // 
-            this.btnRecuperarContrasena.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnRecuperarContrasena.FlatAppearance.BorderSize = 0;
-            this.btnRecuperarContrasena.ForeColor = System.Drawing.Color.White;
-            this.btnRecuperarContrasena.Location = new System.Drawing.Point(197, 352);
-            this.btnRecuperarContrasena.Name = "btnRecuperarContrasena";
-            this.btnRecuperarContrasena.Size = new System.Drawing.Size(138, 23);
-            this.btnRecuperarContrasena.TabIndex = 10;
-            this.btnRecuperarContrasena.Text = "Recuperar Contraseña";
-            this.btnRecuperarContrasena.UseVisualStyleBackColor = false;
-            // 
-            // Form1
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,7 +178,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);

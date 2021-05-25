@@ -4,10 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Funeraria.Entities
+namespace UTN.Winform.Funeraria.Layers.Entities
 {
     class Usuarios
     {
-        public string correo { get; set; }
+
+        public string IDUsuario { get; set; }
+        public string Nombre { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public string Corre { get; set; }
+        public string Telefono { get; set; }
+        public int IDRol { get; set; }
+        public string Contrasenna { get; set; }
+        public int Sexo { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public bool Estado { get; set; }
+
+        public override string ToString() => $"{Nombre} {PrimerApellido}";
+        
     }
 }
