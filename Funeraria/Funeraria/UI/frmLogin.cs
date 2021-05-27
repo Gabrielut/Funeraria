@@ -25,8 +25,8 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Settings.Default.Login = this.txtUsuario.Text.Trim();
-            Settings.Default.Password = this.txtContrasena.Text.Trim();
+            Settings.Default.Login = "sa";
+            Settings.Default.Password = "123456";
             StringBuilder conexion = new StringBuilder();
 
             try
