@@ -47,14 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layers\Entities\Activo.cs" />
     <Compile Include="Layers\Entities\Barrio.cs" />
     <Compile Include="Layers\Entities\Canton.cs" />
+    <Compile Include="Layers\Entities\Cliente.cs" />
     <Compile Include="Layers\Entities\Convenios.cs" />
+    <Compile Include="Layers\Entities\Cotizacion.cs" />
+    <Compile Include="Layers\Entities\DetFactura.cs" />
     <Compile Include="Layers\Entities\DireccionCompleta.cs" />
     <Compile Include="Layers\Entities\Distrito.cs" />
+    <Compile Include="Layers\Entities\EncFactura.cs" />
     <Compile Include="Layers\Entities\Funerarias.cs" />
+    <Compile Include="Layers\Entities\Paquete.cs" />
+    <Compile Include="Layers\Entities\Proveedor.cs" />
     <Compile Include="Layers\Entities\Provincia.cs" />
     <Compile Include="Layers\Entities\Rol.cs" />
+    <Compile Include="Layers\Entities\TipoActivo.cs" />
+    <Compile Include="Layers\Entities\TipoPaquete.cs" />
+    <Compile Include="Layers\Entities\TipoServicio.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
     <Compile Include="UI\frmLogin.cs">
       <SubType>Form</SubType>
