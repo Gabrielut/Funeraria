@@ -25,9 +25,11 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Settings.Default.Login = "sa";
-            Settings.Default.Password = "123456";
+            //Settings.Default.Login = "sa";
+            //Settings.Default.Password = "123456";
             StringBuilder conexion = new StringBuilder();
+            this.txtUsuario.Text = "sa";
+            this.txtContrasena.Text = "123456";
 
             try
             {
