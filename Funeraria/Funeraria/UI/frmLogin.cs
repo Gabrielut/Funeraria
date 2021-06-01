@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UTN.Winform.Funeraria.Interfaces;
+using UTN.Winform.Funeraria.Layers.BLL;
+using UTN.Winform.Funeraria.Layers.Entities;
 using UTN.Winform.Funeraria.Properties;
 
 namespace UTN.Winform.Funeraria.UI
@@ -34,22 +37,33 @@ namespace UTN.Winform.Funeraria.UI
        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Settings.Default.Login = "sa";
-            //Settings.Default.Password = "123456";
-            StringBuilder conexion = new StringBuilder();
-            this.txtUsuario.Text = "sa";
-            this.txtContrasena.Text = "123456";
 
             try
             {
+                IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
+                List<Usuarios> lista = _BLLUsuarios.GetAllUsuarios();
 
-
-                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(this.txtUsuario.Text.Trim(), this.txtContrasena.Text.Trim())))
+                if (string.IsNullOrEmpty(this.txtUsuario.Text))
                 {
-                    // Si esto da error es porque el usuario no existe! 
+                   // errorUsuario.SetError(txtUsuario, "Usuario requerido");
+                    this.txtUsuario.Focus();
+                    return;
                 }
+                if (string.IsNullOrEmpty(this.txtContrasena.Text))
+                {
+                   // errorContrasena.SetError(txtContrasena, "Contraseñá requerida");
+                    this.txtContrasena.Focus();
+                    return;
+                }
+                foreach (Usuarios item in lista)
+                {
+                    if (item.Correo.Equals(this.txtUsuario.Text, StringComparison.CurrentCultureIgnoreCase) && item.Contrasenna.Equals(this.txtContrasena.Text, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        MessageBox.Show("Aqui ingresa al menu principal");
 
-                MessageBox.Show("Creo que funciona jaja");
+                    }
+                 
+                }
             }
             catch (Exception er)
             {
