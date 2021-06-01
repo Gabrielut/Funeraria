@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UTN.Winform.Funeraria.Layers.Entities
 {
-    class Rol
+    public class Rol
     {
         public int IDRol { get; set; }
 

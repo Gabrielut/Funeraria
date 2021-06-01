@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.Interfaces
 {
-    public interface IDALUsuarios
+    interface IBLLLogin
     {
-        List<Usuarios> GetAllUsuarios();
+        bool Login(string pUsuario, string pContrasena);
     }
 }

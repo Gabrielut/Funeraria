@@ -7,7 +7,7 @@ using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.Interfaces
 {
-    interface IBLLUsuarios
+    public interface IBLLUsuarios
     {
         List<Usuarios> GetAllUsuarios();
     }
