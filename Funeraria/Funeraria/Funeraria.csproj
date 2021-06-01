@@ -58,6 +58,7 @@
     <Compile Include="Interfaces\IBLLDistrito.cs" />
     <Compile Include="Interfaces\IBLLEncFactura.cs" />
     <Compile Include="Interfaces\IBLLFunerarias.cs" />
+    <Compile Include="Interfaces\IBLLLogin.cs" />
     <Compile Include="Interfaces\IBLLPaquete.cs" />
     <Compile Include="Interfaces\IBLLProveedores.cs" />
     <Compile Include="Interfaces\IBLLProvincia.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Interfaces\IDALDistrito.cs" />
     <Compile Include="Interfaces\IDALEncFactura.cs" />
     <Compile Include="Interfaces\IDALFunerarias.cs" />
+    <Compile Include="Interfaces\IDALLogin.cs" />
     <Compile Include="Interfaces\IDALPaquete.cs" />
     <Compile Include="Interfaces\IDALProveedores.cs" />
     <Compile Include="Interfaces\IDALProvincia.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Layers\BLL\BLLDistrito.cs" />
     <Compile Include="Layers\BLL\BLLEncFactura.cs" />
     <Compile Include="Layers\BLL\BLLFunerarias.cs" />
+    <Compile Include="Layers\BLL\BLLLogin.cs" />
     <Compile Include="Layers\BLL\BLLPaquete.cs" />
     <Compile Include="Layers\BLL\BLLProveedores.cs" />
     <Compile Include="Layers\BLL\BLLProvincia.cs" />
@@ -115,6 +118,7 @@
     <Compile Include="Layers\DAL\DALDistrito.cs" />
     <Compile Include="Layers\DAL\DALEncFactura.cs" />
     <Compile Include="Layers\DAL\DALFunerarias.cs" />
+    <Compile Include="Layers\DAL\DALLogin.cs" />
     <Compile Include="Layers\DAL\DALPaquete.cs" />
     <Compile Include="Layers\DAL\DALProveedores.cs" />
     <Compile Include="Layers\DAL\DALProvincia.cs" />
@@ -154,6 +158,12 @@
     <Compile Include="Persistencia\IDataBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +177,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
