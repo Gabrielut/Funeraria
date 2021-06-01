@@ -68,7 +68,7 @@ namespace UTN.Winform.Funeraria.UI
             catch (Exception er)
             {
                 
-                throw;
+                throw er;
             }
         }
 
