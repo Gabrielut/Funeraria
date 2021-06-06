@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace UTN.Winform.Funeraria.Layers.Entities
 {
-    public class Rol
+    class Sexo
     {
-        public int IDRol { get; set; }
-
+        public int IdSexo { get; set; }
         public string Descripcion { get; set; }
-
         public bool Estado { get; set; }
+
         public override string ToString()
         {
-            return Descripcion;
+            return  Descripcion;
         }
     }
 }

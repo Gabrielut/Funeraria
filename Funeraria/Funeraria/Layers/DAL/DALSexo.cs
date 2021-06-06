@@ -11,21 +11,23 @@ using UTN.Winform.Funeraria.Properties;
 
 namespace UTN.Winform.Funeraria.Layers.DAL
 {
-    class DALRol : IDALRol
+    class DALSexo : IDALSexo
     {
+
+
         Usuarios _Usuario = new Usuarios();
-        public DALRol()
+        public DALSexo()
         {
             _Usuario.Correo = Settings.Default.Login;
             _Usuario.Contrasenna = Settings.Default.Password;
         }
-        public List<Rol> GetAllRol()
+        public List<Sexo> GetAllSexo()
         {
             IDataReader reader = null;
-            List<Rol> lista = new List<Rol>();
+            List<Sexo> lista = new List<Sexo>();
             SqlCommand command = new SqlCommand();
 
-            string sql = @" select * from  Rol WITH (NOLOCK) where estado = 1 ";
+            string sql = @" select * from  Sexo WITH (NOLOCK) where estado = 1  ";
             command.CommandText = sql;
             command.CommandType = CommandType.Text;
 
@@ -38,10 +40,10 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                     while (reader.Read())
                     {
 
-                        Rol oRol = new Rol();
-                        oRol.IDRol = int.Parse(reader["IDRol"].ToString());
-                        oRol.Descripcion = reader["Descripcion"].ToString();
-                        lista.Add(oRol);
+                        Sexo oSexo = new Sexo();
+                        oSexo.IdSexo = int.Parse(reader["IdSexo"].ToString());
+                        oSexo.Descripcion = reader["Descripcion"].ToString();
+                        lista.Add(oSexo);
                     }
                 }
 
@@ -50,9 +52,10 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
-
+                
             }
             return lista;
+
         }
     }
 }

@@ -17,9 +17,12 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string Telefono { get; set; }
         public int IdRol { get; set; }
         public string Contrasenna { get; set; }
-        public bool Sexo { get; set; }
+        public int Sexo { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public bool Estado { get; set; }
+
+        public string Direccion { get; set; }
+        public string Token { get; set; }
 
         public override string ToString() => $"{Nombre} {PrimerApellido}";
         

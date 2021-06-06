@@ -16,5 +16,17 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             IDALUsuarios _DALUsuarios = new DALUsuarios();
             return _DALUsuarios.GetAllUsuarios();
         }
+
+        public Usuarios GetUsuariosById(string correo)
+        {
+            IDALUsuarios _DALUsuarios = new DALUsuarios();
+            return _DALUsuarios.GetUsuariosById(correo);
+        }
+
+        public Usuarios SaveUsuarios(Usuarios pUsuarios)
+        {
+            IDALUsuarios _DALUsuarios = new DALUsuarios();
+            return _DALUsuarios.SaveUsuarios(pUsuarios);
+        }
     }
 }

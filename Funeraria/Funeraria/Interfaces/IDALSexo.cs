@@ -7,11 +7,8 @@ using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.Interfaces
 {
-    public interface IBLLUsuarios
+    interface IDALSexo
     {
-        List<Usuarios> GetAllUsuarios();
-        Usuarios GetUsuariosById(string correo);
-        Usuarios SaveUsuarios(Usuarios pUsuarios);
-
+        List<Sexo> GetAllSexo();
     }
 }

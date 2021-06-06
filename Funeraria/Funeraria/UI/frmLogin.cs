@@ -20,7 +20,7 @@ namespace UTN.Winform.Funeraria.UI
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
-            
+
             int nLeft,
             int nTop,
             int nBottom,
@@ -34,40 +34,45 @@ namespace UTN.Winform.Funeraria.UI
             InitializeComponent();
         }
 
-       
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
             try
             {
                 IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
-                List<Usuarios> lista = _BLLUsuarios.GetAllUsuarios();
+                Usuarios oUsuarios = _BLLUsuarios.GetUsuariosById(this.txtUsuario.Text);
 
                 if (string.IsNullOrEmpty(this.txtUsuario.Text))
                 {
-                   // errorUsuario.SetError(txtUsuario, "Usuario requerido");
+                    // errorUsuario.SetError(txtUsuario, "Usuario requerido");
                     this.txtUsuario.Focus();
                     return;
                 }
                 if (string.IsNullOrEmpty(this.txtContrasena.Text))
                 {
-                   // errorContrasena.SetError(txtContrasena, "Contraseñá requerida");
+                    // errorContrasena.SetError(txtContrasena, "Contraseñá requerida");
                     this.txtContrasena.Focus();
                     return;
                 }
-                foreach (Usuarios item in lista)
-                {
-                    if (item.Correo.Equals(this.txtUsuario.Text, StringComparison.CurrentCultureIgnoreCase) && item.Contrasenna.Equals(this.txtContrasena.Text, StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        MessageBox.Show("Aqui ingresa al menu principal");
 
-                    }
-                 
+                if (oUsuarios.Correo.Equals(this.txtUsuario.Text, StringComparison.CurrentCultureIgnoreCase) && oUsuarios.Contrasenna.Equals(this.txtContrasena.Text, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    
+                    this.DialogResult = DialogResult.OK;
+
                 }
+                else
+                {
+                    MessageBox.Show("El usuario no existe o los datos ingresados son incorrectos");
+                    txtUsuario.Focus();
+                }
+
+
             }
             catch (Exception er)
             {
-                
+
                 throw;
             }
         }
@@ -77,7 +82,7 @@ namespace UTN.Winform.Funeraria.UI
             btnLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLogin.Width, btnLogin.Height, 5, 5));
             btnRegistrarse.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnRegistrarse.Width, btnRegistrarse.Height, 5, 5));
             pnlLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlLogin.Width, pnlLogin.Height, 20, 25));
-                     
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,6 +90,6 @@ namespace UTN.Winform.Funeraria.UI
             Application.Exit();
         }
 
-        
+
     }
 }

@@ -9,13 +9,12 @@ using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.Layers.BLL
 {
-    class BLLRol : IBLLRol
+    class BLLSexo : IBLLSexo
     {
-        public List<Rol> GetAllRol()
+        public List<Sexo> GetAllSexo()
         {
-            IDALRol _IIDALRol = new DALRol();
-
-            return _IIDALRol.GetAllRol();
+            IDALSexo _DALSexo = new DALSexo();
+            return _DALSexo.GetAllSexo();
         }
     }
 }
