@@ -85,5 +85,20 @@ namespace UTN.Winform.Funeraria.UI
                 throw;
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            IBLLUsuarios _bLLUsuarios = new BLLUsuarios();
+
+            List<Usuarios> lista = _bLLUsuarios.GetUsuariosByFilter(txtBusqueda.Text);
+            foreach (Usuarios item in lista)
+            {
+
+                MessageBox.Show(item.ToString());
+            }
+                
+
+
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string Direccion { get; set; }
         public string Token { get; set; }
 
-        public override string ToString() => $"{Nombre} {PrimerApellido}";
+        public override string ToString() => $"{Nombre} {PrimerApellido} {SegundoApellido}";
         
     }
 }

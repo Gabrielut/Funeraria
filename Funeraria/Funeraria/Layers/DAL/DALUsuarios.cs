@@ -19,6 +19,30 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             _Usuario.Correo = Settings.Default.Login;
             _Usuario.Contrasenna = Settings.Default.Password;
         }
+
+        public bool DeleteUsuarios(string pId)
+        {
+            double rows = 0;
+            string sql = @"Delete from  Usuarios 
+                           Where (@IdUsuario = IdUsuario) ";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@IdUsuario", pId);
+            cmd.CommandText = sql;
+
+            using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+            {
+                rows = db.ExecuteNonQuery(cmd);
+            }
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public List<Usuarios> GetAllUsuarios()
         {
             DataSet ds = null;
@@ -63,6 +87,55 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                
             }
             return lista;
+        }
+
+        public List<Usuarios> GetUsuariosByFilter(string pDescripcion)
+        {
+            DataSet ds = null;
+            List<Usuarios> lista = new List<Usuarios>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @" select * from  Usuarios WITH (NOLOCK) Where Nombre+PrimerApellido+SegundoApellido like '%'+ @filtro + '%'";
+                command.Parameters.AddWithValue("@filtro", pDescripcion);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+                }
+
+                // Si devolvió filas
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    // Iterar en todas las filas y Mapearlas
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        Usuarios oUsarios = new Usuarios();
+                        oUsarios.IDUsuario = dr["IDUsuario"].ToString();
+                        oUsarios.Nombre = dr["Nombre"].ToString();
+                        oUsarios.PrimerApellido = dr["PrimerApellido"].ToString();
+                        oUsarios.SegundoApellido = dr["SegundoApellido"].ToString();
+                        oUsarios.Correo = dr["Correo"].ToString();
+                        oUsarios.Telefono = dr["Telefono"].ToString();
+                        oUsarios.IdRol = (int)dr["IDRol"];
+                        oUsarios.Contrasenna = dr["Contrasenna"].ToString();
+                        oUsarios.Estado = (bool)dr["Estado"];
+                        oUsarios.Sexo = (int)dr["Sexo"];
+                        oUsarios.FechaNacimiento = DateTime.Parse(dr["FechaNacimiento"].ToString());
+
+                        lista.Add(oUsarios);
+                    }
+                }
+
+                return lista;
+            }
+            catch (Exception er)
+            {
+                throw;
+            }
         }
 
         public Usuarios GetUsuariosById(string correo)

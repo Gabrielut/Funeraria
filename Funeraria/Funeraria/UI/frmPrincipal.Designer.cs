@@ -78,6 +78,8 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cboRol = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -598,12 +600,31 @@
             this.cboRol.Size = new System.Drawing.Size(121, 21);
             this.cboRol.TabIndex = 32;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(634, 106);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 33;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(503, 106);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(100, 20);
+            this.txtBusqueda.TabIndex = 34;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1286, 640);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cboRol);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDireccion);
@@ -696,5 +717,7 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboRol;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBusqueda;
     }
 }
