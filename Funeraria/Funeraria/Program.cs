@@ -19,7 +19,7 @@ static class Program
             ofrmLogin.ShowDialog();
 
             if (ofrmLogin.DialogResult == DialogResult.OK)
-                Application.Run(new frmLogin());
+                Application.Run(new frmPrincipal());
         }
     }
     

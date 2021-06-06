@@ -129,8 +129,10 @@
             this.txtContrasena.Location = new System.Drawing.Point(65, 310);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(283, 26);
             this.txtContrasena.TabIndex = 7;
+            this.txtContrasena.Text = "123456";
             // 
             // txtUsuario
             // 
@@ -142,6 +144,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(283, 26);
             this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.Text = "admin@admin.com";
             // 
             // btnLogin
             // 
