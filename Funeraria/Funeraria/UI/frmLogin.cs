@@ -75,7 +75,7 @@ namespace UTN.Winform.Funeraria.UI
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
             btnLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLogin.Width, btnLogin.Height, 5, 5));
-            btnRegistrarse.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnRegistrarse.Width, btnRegistrarse.Height, 5, 5));
+            
             pnlLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlLogin.Width, pnlLogin.Height, 20, 25));
                      
         }
@@ -85,6 +85,14 @@ namespace UTN.Winform.Funeraria.UI
             Application.Exit();
         }
 
-        
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
-                throw;
+                throw er;
             }
         }
     }

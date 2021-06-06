@@ -31,375 +31,481 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMenuMantenimientos = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlMantenimientos = new System.Windows.Forms.Panel();
+            this.btnMenuClientes = new System.Windows.Forms.Button();
+            this.btnMenuPaquetes = new System.Windows.Forms.Button();
+            this.btnMenuEmpleados = new System.Windows.Forms.Button();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnMenuMantenimientos = new FontAwesome.Sharp.IconButton();
+            this.btnMenuProveedores = new System.Windows.Forms.Button();
+            this.btnMenuActivos = new System.Windows.Forms.Button();
+            this.pnlHerramientas = new System.Windows.Forms.Panel();
+            this.btnMenuHerramientas = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlReportes = new System.Windows.Forms.Panel();
+            this.btnMenuReportes = new FontAwesome.Sharp.IconButton();
+            this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.pnlMantenimientos.SuspendLayout();
+            this.pnlHerramientas.SuspendLayout();
+            this.pnlReportes.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.panel2.Controls.Add(this.iconButton2);
+            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1286, 40);
+            this.panel2.Size = new System.Drawing.Size(1306, 49);
             this.panel2.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.button19);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.button18);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnMenuMantenimientos);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pnlReportes);
+            this.panel1.Controls.Add(this.pnlHerramientas);
+            this.panel1.Controls.Add(this.iconButton3);
+            this.panel1.Controls.Add(this.pnlMantenimientos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 600);
+            this.panel1.Size = new System.Drawing.Size(339, 639);
             this.panel1.TabIndex = 3;
             // 
-            // panel3
+            // pnlMantenimientos
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(183, 76);
-            this.panel3.TabIndex = 0;
+            this.pnlMantenimientos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlMantenimientos.Controls.Add(this.btnMenuMantenimientos);
+            this.pnlMantenimientos.Controls.Add(this.btnMenuActivos);
+            this.pnlMantenimientos.Controls.Add(this.btnMenuProveedores);
+            this.pnlMantenimientos.Controls.Add(this.btnMenuClientes);
+            this.pnlMantenimientos.Controls.Add(this.btnMenuPaquetes);
+            this.pnlMantenimientos.Controls.Add(this.btnMenuEmpleados);
+            this.pnlMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMantenimientos.Location = new System.Drawing.Point(0, 0);
+            this.pnlMantenimientos.Name = "pnlMantenimientos";
+            this.pnlMantenimientos.Size = new System.Drawing.Size(339, 234);
+            this.pnlMantenimientos.TabIndex = 4;
+            // 
+            // btnMenuClientes
+            // 
+            this.btnMenuClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnMenuClientes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenuClientes.FlatAppearance.BorderSize = 0;
+            this.btnMenuClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMenuClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnMenuClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuClientes.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.btnMenuClientes.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnMenuClientes.Location = new System.Drawing.Point(0, 123);
+            this.btnMenuClientes.Name = "btnMenuClientes";
+            this.btnMenuClientes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMenuClientes.Size = new System.Drawing.Size(339, 38);
+            this.btnMenuClientes.TabIndex = 6;
+            this.btnMenuClientes.Text = "Clientes";
+            this.btnMenuClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuClientes.UseVisualStyleBackColor = false;
+            this.btnMenuClientes.Click += new System.EventHandler(this.btnMenuClientes_Click);
+            // 
+            // btnMenuPaquetes
+            // 
+            this.btnMenuPaquetes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnMenuPaquetes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenuPaquetes.FlatAppearance.BorderSize = 0;
+            this.btnMenuPaquetes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMenuPaquetes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnMenuPaquetes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPaquetes.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.btnMenuPaquetes.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnMenuPaquetes.Location = new System.Drawing.Point(0, 161);
+            this.btnMenuPaquetes.Name = "btnMenuPaquetes";
+            this.btnMenuPaquetes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMenuPaquetes.Size = new System.Drawing.Size(339, 33);
+            this.btnMenuPaquetes.TabIndex = 5;
+            this.btnMenuPaquetes.Text = "Paquetes";
+            this.btnMenuPaquetes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuPaquetes.UseVisualStyleBackColor = false;
+            this.btnMenuPaquetes.Click += new System.EventHandler(this.btnMenuPaquetes_Click);
+            // 
+            // btnMenuEmpleados
+            // 
+            this.btnMenuEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenuEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnMenuEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMenuEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnMenuEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuEmpleados.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.btnMenuEmpleados.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnMenuEmpleados.Location = new System.Drawing.Point(0, 194);
+            this.btnMenuEmpleados.Name = "btnMenuEmpleados";
+            this.btnMenuEmpleados.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMenuEmpleados.Size = new System.Drawing.Size(339, 40);
+            this.btnMenuEmpleados.TabIndex = 4;
+            this.btnMenuEmpleados.Text = "Empleados";
+            this.btnMenuEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuEmpleados.UseVisualStyleBackColor = false;
+            this.btnMenuEmpleados.Click += new System.EventHandler(this.btnMenuEmpleados_Click);
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogo.Location = new System.Drawing.Point(339, 49);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(967, 639);
+            this.pnlLogo.TabIndex = 4;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.Location = new System.Drawing.Point(1281, 18);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(22, 22);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(1250, 15);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(25, 28);
+            this.iconButton1.TabIndex = 19;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(1218, 15);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(26, 24);
+            this.iconButton2.TabIndex = 20;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(291, 596);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(45, 43);
+            this.iconButton3.TabIndex = 21;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // btnMenuMantenimientos
             // 
+            this.btnMenuMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.btnMenuMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuMantenimientos.FlatAppearance.BorderSize = 0;
             this.btnMenuMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuMantenimientos.Location = new System.Drawing.Point(0, 76);
+            this.btnMenuMantenimientos.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuMantenimientos.ForeColor = System.Drawing.Color.White;
+            this.btnMenuMantenimientos.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnMenuMantenimientos.IconColor = System.Drawing.Color.White;
+            this.btnMenuMantenimientos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenuMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuMantenimientos.Location = new System.Drawing.Point(0, 0);
             this.btnMenuMantenimientos.Name = "btnMenuMantenimientos";
-            this.btnMenuMantenimientos.Size = new System.Drawing.Size(183, 30);
-            this.btnMenuMantenimientos.TabIndex = 1;
+            this.btnMenuMantenimientos.Size = new System.Drawing.Size(339, 46);
+            this.btnMenuMantenimientos.TabIndex = 22;
             this.btnMenuMantenimientos.Text = "Mantenimientos";
             this.btnMenuMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuMantenimientos.UseVisualStyleBackColor = true;
+            this.btnMenuMantenimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMenuMantenimientos.UseVisualStyleBackColor = false;
+            this.btnMenuMantenimientos.Click += new System.EventHandler(this.btnMenuMantenimientos_Click_1);
             // 
-            // panel4
+            // btnMenuProveedores
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 106);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(183, 154);
-            this.panel4.TabIndex = 4;
+            this.btnMenuProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnMenuProveedores.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenuProveedores.FlatAppearance.BorderSize = 0;
+            this.btnMenuProveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMenuProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnMenuProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuProveedores.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.btnMenuProveedores.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnMenuProveedores.Location = new System.Drawing.Point(0, 87);
+            this.btnMenuProveedores.Name = "btnMenuProveedores";
+            this.btnMenuProveedores.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMenuProveedores.Size = new System.Drawing.Size(339, 36);
+            this.btnMenuProveedores.TabIndex = 7;
+            this.btnMenuProveedores.Text = "Proveedores";
+            this.btnMenuProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuProveedores.UseVisualStyleBackColor = false;
+            this.btnMenuProveedores.Click += new System.EventHandler(this.btnMenuProveedores_Click);
+            // 
+            // btnMenuActivos
+            // 
+            this.btnMenuActivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnMenuActivos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenuActivos.FlatAppearance.BorderSize = 0;
+            this.btnMenuActivos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMenuActivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnMenuActivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuActivos.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.btnMenuActivos.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnMenuActivos.Location = new System.Drawing.Point(0, 45);
+            this.btnMenuActivos.Name = "btnMenuActivos";
+            this.btnMenuActivos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMenuActivos.Size = new System.Drawing.Size(339, 42);
+            this.btnMenuActivos.TabIndex = 8;
+            this.btnMenuActivos.Text = "Activos";
+            this.btnMenuActivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuActivos.UseVisualStyleBackColor = false;
+            this.btnMenuActivos.Click += new System.EventHandler(this.btnMenuActivos_Click);
+            // 
+            // pnlHerramientas
+            // 
+            this.pnlHerramientas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlHerramientas.Controls.Add(this.button1);
+            this.pnlHerramientas.Controls.Add(this.btnMenuHerramientas);
+            this.pnlHerramientas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHerramientas.Location = new System.Drawing.Point(0, 234);
+            this.pnlHerramientas.Name = "pnlHerramientas";
+            this.pnlHerramientas.Size = new System.Drawing.Size(339, 89);
+            this.pnlHerramientas.TabIndex = 22;
+            // 
+            // btnMenuHerramientas
+            // 
+            this.btnMenuHerramientas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnMenuHerramientas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuHerramientas.FlatAppearance.BorderSize = 0;
+            this.btnMenuHerramientas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuHerramientas.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuHerramientas.ForeColor = System.Drawing.Color.White;
+            this.btnMenuHerramientas.IconChar = FontAwesome.Sharp.IconChar.Toolbox;
+            this.btnMenuHerramientas.IconColor = System.Drawing.Color.White;
+            this.btnMenuHerramientas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenuHerramientas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuHerramientas.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuHerramientas.Name = "btnMenuHerramientas";
+            this.btnMenuHerramientas.Size = new System.Drawing.Size(339, 44);
+            this.btnMenuHerramientas.TabIndex = 0;
+            this.btnMenuHerramientas.Text = "Herramientas";
+            this.btnMenuHerramientas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuHerramientas.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 44);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(183, 31);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Empleados";
+            this.button1.Size = new System.Drawing.Size(339, 45);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Cotizaciones";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // pnlReportes
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 31);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(183, 31);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Paquetes";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.pnlReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlReportes.Controls.Add(this.button4);
+            this.pnlReportes.Controls.Add(this.button3);
+            this.pnlReportes.Controls.Add(this.button2);
+            this.pnlReportes.Controls.Add(this.button6);
+            this.pnlReportes.Controls.Add(this.btnMenuReportes);
+            this.pnlReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlReportes.Location = new System.Drawing.Point(0, 323);
+            this.pnlReportes.Name = "pnlReportes";
+            this.pnlReportes.Size = new System.Drawing.Size(339, 211);
+            this.pnlReportes.TabIndex = 23;
             // 
-            // button3
+            // btnMenuReportes
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(0, 62);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(183, 31);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Clientes";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Location = new System.Drawing.Point(0, 93);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(183, 31);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Proveedores";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 124);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(183, 30);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Activos";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuReportes.FlatAppearance.BorderSize = 0;
+            this.btnMenuReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuReportes.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuReportes.ForeColor = System.Drawing.Color.White;
+            this.btnMenuReportes.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            this.btnMenuReportes.IconColor = System.Drawing.Color.White;
+            this.btnMenuReportes.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMenuReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuReportes.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuReportes.Name = "btnMenuReportes";
+            this.btnMenuReportes.Size = new System.Drawing.Size(339, 49);
+            this.btnMenuReportes.TabIndex = 1;
+            this.btnMenuReportes.Text = "Reportes";
+            this.btnMenuReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuReportes.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Goldenrod;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(1303, 3);
+            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.button6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button6.Location = new System.Drawing.Point(0, 163);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(39, 34);
-            this.button6.TabIndex = 1;
+            this.button6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(339, 48);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Proveedores";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // panel5
+            // button2
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel5.Controls.Add(this.button7);
-            this.panel5.Controls.Add(this.button8);
-            this.panel5.Controls.Add(this.button9);
-            this.panel5.Controls.Add(this.button10);
-            this.panel5.Controls.Add(this.button11);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 290);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(183, 154);
-            this.panel5.TabIndex = 6;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button2.Location = new System.Drawing.Point(0, 125);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(339, 38);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Clientes";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button3
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Location = new System.Drawing.Point(0, 124);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(183, 30);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Activos";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button3.Location = new System.Drawing.Point(0, 83);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(339, 42);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Activos";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // button4
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.Location = new System.Drawing.Point(0, 93);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(183, 31);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Proveedores";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
+            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button4.Location = new System.Drawing.Point(0, 41);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(339, 42);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Paquetes";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // panel3
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.Location = new System.Drawing.Point(0, 62);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(183, 31);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Calculo de Transporte";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.iconButton4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 534);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(339, 37);
+            this.panel3.TabIndex = 24;
             // 
-            // button10
+            // iconButton4
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.Location = new System.Drawing.Point(0, 31);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(183, 31);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Seleccion de Proveedores";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(183, 31);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "Cotizaciones";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(0, 260);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(183, 30);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "Herramientas";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel6.Controls.Add(this.button13);
-            this.panel6.Controls.Add(this.button14);
-            this.panel6.Controls.Add(this.button15);
-            this.panel6.Controls.Add(this.button16);
-            this.panel6.Controls.Add(this.button17);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 474);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(183, 154);
-            this.panel6.TabIndex = 8;
-            // 
-            // button13
-            // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.Location = new System.Drawing.Point(0, 124);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(183, 30);
-            this.button13.TabIndex = 8;
-            this.button13.Text = "Proveedores";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.Location = new System.Drawing.Point(0, 93);
-            this.button14.Name = "button14";
-            this.button14.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(183, 31);
-            this.button14.TabIndex = 7;
-            this.button14.Text = "Demanda de Cofres";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.Location = new System.Drawing.Point(0, 62);
-            this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(183, 31);
-            this.button15.TabIndex = 6;
-            this.button15.Text = "Cobro y pago - Proveedores";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.Location = new System.Drawing.Point(0, 31);
-            this.button16.Name = "button16";
-            this.button16.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(183, 31);
-            this.button16.TabIndex = 5;
-            this.button16.Text = "Paquetes";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button17.Location = new System.Drawing.Point(0, 0);
-            this.button17.Name = "button17";
-            this.button17.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button17.Size = new System.Drawing.Size(183, 31);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "Activos";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(0, 444);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(183, 30);
-            this.button18.TabIndex = 7;
-            this.button18.Text = "Reportes";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Location = new System.Drawing.Point(0, 628);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(183, 30);
-            this.button19.TabIndex = 9;
-            this.button19.Text = "Ayuda";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.UseVisualStyleBackColor = true;
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton4.Location = new System.Drawing.Point(0, 0);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(339, 47);
+            this.iconButton4.TabIndex = 2;
+            this.iconButton4.Text = "Ayuda";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.UseVisualStyleBackColor = false;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 640);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1306, 688);
+            this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.pnlMantenimientos.ResumeLayout(false);
+            this.pnlHerramientas.ResumeLayout(false);
+            this.pnlReportes.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -408,29 +514,28 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel pnlMantenimientos;
+        private System.Windows.Forms.Button btnMenuClientes;
+        private System.Windows.Forms.Button btnMenuPaquetes;
+        private System.Windows.Forms.Button btnMenuEmpleados;
+        private System.Windows.Forms.Panel pnlLogo;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnMenuMantenimientos;
+        private System.Windows.Forms.Button btnMenuActivos;
+        private System.Windows.Forms.Button btnMenuProveedores;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private System.Windows.Forms.Panel pnlReportes;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnMenuMantenimientos;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button19;
+        private FontAwesome.Sharp.IconButton btnMenuReportes;
+        private System.Windows.Forms.Panel pnlHerramientas;
+        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton btnMenuHerramientas;
     }
 }
