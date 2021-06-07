@@ -84,7 +84,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
-               
+                throw er;
             }
             return lista;
         }

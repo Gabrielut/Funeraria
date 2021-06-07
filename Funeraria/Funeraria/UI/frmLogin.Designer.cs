@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnRecuperarContrasena = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +38,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.pnlLogin.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +46,6 @@
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.White;
-            this.pnlLogin.Controls.Add(this.btnRegistrarse);
             this.pnlLogin.Controls.Add(this.btnRecuperarContrasena);
             this.pnlLogin.Controls.Add(this.lblBienvenido);
             this.pnlLogin.Controls.Add(this.label1);
@@ -55,25 +53,11 @@
             this.pnlLogin.Controls.Add(this.txtContrasena);
             this.pnlLogin.Controls.Add(this.txtUsuario);
             this.pnlLogin.Controls.Add(this.btnLogin);
-            this.pnlLogin.Location = new System.Drawing.Point(822, 111);
+            this.pnlLogin.Location = new System.Drawing.Point(766, 93);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(386, 487);
             this.pnlLogin.TabIndex = 9;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
-            // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnRegistrarse.Location = new System.Drawing.Point(279, 25);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(84, 32);
-            this.btnRegistrarse.TabIndex = 14;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.UseVisualStyleBackColor = false;
             // 
             // btnRecuperarContrasena
             // 
@@ -81,7 +65,7 @@
             this.btnRecuperarContrasena.FlatAppearance.BorderSize = 0;
             this.btnRecuperarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecuperarContrasena.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecuperarContrasena.Location = new System.Drawing.Point(210, 347);
+            this.btnRecuperarContrasena.Location = new System.Drawing.Point(195, 300);
             this.btnRecuperarContrasena.Name = "btnRecuperarContrasena";
             this.btnRecuperarContrasena.Size = new System.Drawing.Size(153, 23);
             this.btnRecuperarContrasena.TabIndex = 12;
@@ -94,7 +78,7 @@
             this.lblBienvenido.BackColor = System.Drawing.Color.Transparent;
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft New Tai Lue", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblBienvenido.Location = new System.Drawing.Point(88, 106);
+            this.lblBienvenido.Location = new System.Drawing.Point(86, 69);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(218, 31);
             this.lblBienvenido.TabIndex = 1;
@@ -105,7 +89,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(89, 201);
+            this.label1.Location = new System.Drawing.Point(61, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 21);
             this.label1.TabIndex = 11;
@@ -116,7 +100,7 @@
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.ForeColor = System.Drawing.Color.Black;
-            this.lblContrasena.Location = new System.Drawing.Point(90, 288);
+            this.lblContrasena.Location = new System.Drawing.Point(61, 242);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(96, 21);
             this.lblContrasena.TabIndex = 3;
@@ -126,7 +110,7 @@
             // 
             this.txtContrasena.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(65, 310);
+            this.txtContrasena.Location = new System.Drawing.Point(65, 267);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
@@ -139,21 +123,23 @@
             this.txtUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolTip;
             this.txtUsuario.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(65, 226);
+            this.txtUsuario.Location = new System.Drawing.Point(65, 183);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(283, 26);
             this.txtUsuario.TabIndex = 6;
-            this.txtUsuario.Text = "admin@admin.com";
+
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.DimGray;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(65, 397);
+            this.btnLogin.Location = new System.Drawing.Point(65, 373);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(283, 32);
             this.btnLogin.TabIndex = 5;
@@ -163,36 +149,38 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1300, 39);
+            this.panel2.Size = new System.Drawing.Size(1254, 43);
             this.panel2.TabIndex = 10;
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.BackColor = System.Drawing.Color.Goldenrod;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1258, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 33);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Poo;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.Location = new System.Drawing.Point(1210, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(41, 42);
+            this.btnClose.TabIndex = 19;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1300, 700);
+            this.ClientSize = new System.Drawing.Size(1254, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlLogin);
             this.DoubleBuffered = true;
@@ -218,8 +206,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRecuperarContrasena;
-        private System.Windows.Forms.Button btnRegistrarse;
-        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }
 
