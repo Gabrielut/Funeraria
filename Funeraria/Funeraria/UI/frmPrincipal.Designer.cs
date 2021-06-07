@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
@@ -62,6 +63,7 @@
             this.pnlHerramientas.SuspendLayout();
             this.pnlReportes.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -82,6 +84,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1297, 52);
             this.panel2.TabIndex = 2;
+
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // btnCerrar
@@ -522,36 +525,72 @@
             this.pnlFormularios.Name = "pnlFormularios";
             this.pnlFormularios.Size = new System.Drawing.Size(1041, 741);
             this.pnlFormularios.TabIndex = 4;
+
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+                               // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.button19);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.button18);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btnMenuMantenimientos);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 600);
+            this.panel1.TabIndex = 3;
+            //            
+       
+
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1297, 793);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+
+
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panel2.ResumeLayout(false);
+
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             this.pnlMantenimientos.ResumeLayout(false);
             this.pnlHerramientas.ResumeLayout(false);
             this.pnlReportes.ResumeLayout(false);
             this.pnlContenedor.ResumeLayout(false);
+
+            this.panel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
+
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnMinimizar;
         private FontAwesome.Sharp.IconButton btnMaximizar;
@@ -578,5 +617,6 @@
         private FontAwesome.Sharp.IconPictureBox picBoxLogo;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Panel pnlFormularios;
+
     }
 }

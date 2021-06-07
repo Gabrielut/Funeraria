@@ -15,19 +15,15 @@ static class Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-        //frmLogin ofrmLogin = new frmLogin();
-        //ofrmLogin.ShowDialog();
-
-        //if (ofrmLogin.DialogResult == DialogResult.OK)
-        //    Application.Run(new frmLogin());
+        frmLogin ofrmLogin = new frmLogin();
+        ofrmLogin.ShowDialog();
 
 
-        frmPrincipal ofrmPrincipal = new frmPrincipal();
-        ofrmPrincipal.ShowDialog();
+        if (ofrmLogin.DialogResult == DialogResult.OK)
+           Application.Run(new frmLogin());
+          
+        }
 
-        if (ofrmPrincipal.DialogResult == DialogResult.OK)
-            Application.Run(new frmPrincipal());
-    }
     }
     
 

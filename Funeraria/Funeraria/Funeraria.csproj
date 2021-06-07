@@ -66,6 +66,7 @@
     <Compile Include="Interfaces\IBLLProveedores.cs" />
     <Compile Include="Interfaces\IBLLProvincia.cs" />
     <Compile Include="Interfaces\IBLLRol.cs" />
+    <Compile Include="Interfaces\IBLLSexo.cs" />
     <Compile Include="Interfaces\IBLLTipoActivo.cs" />
     <Compile Include="Interfaces\IBLLTipoPaquete.cs" />
     <Compile Include="Interfaces\IBLLTipoServicio.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Interfaces\IDALProveedores.cs" />
     <Compile Include="Interfaces\IDALProvincia.cs" />
     <Compile Include="Interfaces\IDALRol.cs" />
+    <Compile Include="Interfaces\IDALSexo.cs" />
     <Compile Include="Interfaces\IDALTipoActivo.cs" />
     <Compile Include="Interfaces\IDALTipoPaquete.cs" />
     <Compile Include="Interfaces\IDALTipoServicio.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Layers\BLL\BLLProveedores.cs" />
     <Compile Include="Layers\BLL\BLLProvincia.cs" />
     <Compile Include="Layers\BLL\BLLRol.cs" />
+    <Compile Include="Layers\BLL\BLLSexo.cs" />
     <Compile Include="Layers\BLL\BLLTipoActivo.cs" />
     <Compile Include="Layers\BLL\BLLTipoPaquete.cs" />
     <Compile Include="Layers\BLL\BLLTipoServicio.cs" />
@@ -126,6 +129,7 @@
     <Compile Include="Layers\DAL\DALProveedores.cs" />
     <Compile Include="Layers\DAL\DALProvincia.cs" />
     <Compile Include="Layers\DAL\DALRol.cs" />
+    <Compile Include="Layers\DAL\DALSexo.cs" />
     <Compile Include="Layers\DAL\DALTipoActivo.cs" />
     <Compile Include="Layers\DAL\DALTipoPaquete.cs" />
     <Compile Include="Layers\DAL\DALTipoServicio.cs" />
@@ -145,6 +149,7 @@
     <Compile Include="Layers\Entities\Proveedor.cs" />
     <Compile Include="Layers\Entities\Provincia.cs" />
     <Compile Include="Layers\Entities\Rol.cs" />
+    <Compile Include="Layers\Entities\Sexo.cs" />
     <Compile Include="Layers\Entities\TipoActivo.cs" />
     <Compile Include="Layers\Entities\TipoPaquete.cs" />
     <Compile Include="Layers\Entities\TipoServicio.cs" />

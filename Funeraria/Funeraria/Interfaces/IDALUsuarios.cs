@@ -10,5 +10,9 @@ namespace UTN.Winform.Funeraria.Interfaces
     public interface IDALUsuarios
     {
         List<Usuarios> GetAllUsuarios();
+        Usuarios GetUsuariosById(string correo);
+        Usuarios SaveUsuarios(Usuarios pUsuarios);
+        List<Usuarios> GetUsuariosByFilter(string pDescripcion);
+        bool DeleteUsuarios(string pId);
     }
 }
