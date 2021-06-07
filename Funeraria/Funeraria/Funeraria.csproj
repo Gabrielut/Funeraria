@@ -224,6 +224,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\frmMantEmpleado.resx">
+      <DependentUpon>frmMantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

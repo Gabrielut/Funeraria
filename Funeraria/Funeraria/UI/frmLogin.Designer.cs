@@ -128,9 +128,8 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(283, 26);
             this.txtUsuario.TabIndex = 6;
-
+            this.txtUsuario.Text = "admin@admin.com";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-
             // 
             // btnLogin
             // 
