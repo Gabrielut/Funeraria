@@ -10,10 +10,11 @@ namespace UTN.Winform.Funeraria.Interfaces
     public interface IBLLUsuarios
     {
         List<Usuarios> GetAllUsuarios();
-        Usuarios GetUsuariosById(string correo);
+        Usuarios GetUsuariosById(string pUsuarios);
         Usuarios SaveUsuarios(Usuarios pUsuarios);
         List<Usuarios> GetUsuariosByFilter(string pDescripcion);
         bool DaleteUsuarios(string pId);
+        Usuarios LoginUsuarios(string pCorreo);
 
     }
 }
