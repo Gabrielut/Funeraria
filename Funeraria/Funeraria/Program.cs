@@ -21,6 +21,11 @@ static class Program
         if (ofrmLogin.DialogResult == DialogResult.OK)
             Application.Run(new frmPrincipal());
 
+        //frmPrincipal ofrmLogin = new frmPrincipal();
+        //ofrmLogin.ShowDialog();
+        //if (ofrmLogin.DialogResult == DialogResult.OK)
+        //    Application.Run(new frmPrincipal());
+
     }
 
 }

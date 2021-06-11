@@ -225,8 +225,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\frmMantActivo.resx">
+      <DependentUpon>frmMantActivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantCliente.resx">
+      <DependentUpon>frmMantCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMantEmpleado.resx">
       <DependentUpon>frmMantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantPaquete.resx">
+      <DependentUpon>frmMantPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantProveedor.resx">
+      <DependentUpon>frmMantProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

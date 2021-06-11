@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
@@ -54,6 +57,7 @@
             this.picBoxLogo = new FontAwesome.Sharp.IconPictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlReportes.SuspendLayout();
@@ -61,11 +65,15 @@
             this.pnlMantenimientos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            this.pnlFormularios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.panel2.Controls.Add(this.lblBienvenido);
+            this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnMinimizar);
             this.panel2.Controls.Add(this.btnMaximizar);
             this.panel2.Controls.Add(this.btnCerrar);
@@ -76,6 +84,31 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblBienvenido.Location = new System.Drawing.Point(66, 18);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(67, 16);
+            this.lblBienvenido.TabIndex = 22;
+            this.lblBienvenido.Text = "Bienvenido";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.Location = new System.Drawing.Point(12, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(48, 45);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnMinimizar
             // 
@@ -405,6 +438,7 @@
             this.btnMantPaquetes.Text = "Paquetes";
             this.btnMantPaquetes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantPaquetes.UseVisualStyleBackColor = false;
+            this.btnMantPaquetes.Click += new System.EventHandler(this.btnMantPaquetes_Click_1);
             // 
             // btnMantClientes
             // 
@@ -423,6 +457,7 @@
             this.btnMantClientes.Text = "Clientes";
             this.btnMantClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantClientes.UseVisualStyleBackColor = false;
+            this.btnMantClientes.Click += new System.EventHandler(this.btnMantClientes_Click_1);
             // 
             // btnMantProveedores
             // 
@@ -441,6 +476,7 @@
             this.btnMantProveedores.Text = "Proveedores";
             this.btnMantProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantProveedores.UseVisualStyleBackColor = false;
+            this.btnMantProveedores.Click += new System.EventHandler(this.btnMantProveedores_Click_1);
             // 
             // btnMantActivos
             // 
@@ -459,6 +495,7 @@
             this.btnMantActivos.Text = "Activos";
             this.btnMantActivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantActivos.UseVisualStyleBackColor = false;
+            this.btnMantActivos.Click += new System.EventHandler(this.btnMantActivos_Click_1);
             // 
             // btnMantenimientos
             // 
@@ -511,11 +548,26 @@
             // 
             // pnlFormularios
             // 
+            this.pnlFormularios.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlFormularios.Controls.Add(this.pbLogo);
             this.pnlFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormularios.Location = new System.Drawing.Point(256, 52);
             this.pnlFormularios.Name = "pnlFormularios";
             this.pnlFormularios.Size = new System.Drawing.Size(1028, 697);
             this.pnlFormularios.TabIndex = 4;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbLogo.BackgroundImage")));
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(1028, 697);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -534,12 +586,15 @@
             this.Text = "frmPrincipal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
             this.pnlReportes.ResumeLayout(false);
             this.pnlHerramientas.ResumeLayout(false);
             this.pnlMantenimientos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
+            this.pnlFormularios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,6 +627,8 @@
         private FontAwesome.Sharp.IconPictureBox picBoxLogo;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Panel pnlFormularios;
-
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label lblBienvenido;
+        private FontAwesome.Sharp.IconButton btnCancelar;
     }
 }

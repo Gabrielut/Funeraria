@@ -20,6 +20,7 @@ namespace UTN.Winform.Funeraria.UI
         {
             InitializeComponent();
             disenhoMenu();
+            this.WindowState = FormWindowState.Maximized;
 
             //Form
             this.Text = string.Empty;
@@ -241,6 +242,7 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            
         }
 
 
@@ -269,6 +271,7 @@ namespace UTN.Winform.Funeraria.UI
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+
         }
         //Remove transparent border in maximized state
         private void frmPrincipal_Resize(object sender, EventArgs e)
@@ -330,6 +333,30 @@ namespace UTN.Winform.Funeraria.UI
         {
             esconderSubMenu();
             abrirForumalario<frmMantEmpleado>();
+        }
+
+        private void btnMantActivos_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmMantActivo>();
+        }
+
+        private void btnMantClientes_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmMantCliente>();
+        }
+
+        private void btnMantPaquetes_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmMantPaquete>();
+        }
+
+        private void btnMantProveedores_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmMantProveedor>();
         }
     }
 }
