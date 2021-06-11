@@ -41,7 +41,7 @@ namespace UTN.Winform.Funeraria.UI
             try
             {
                 IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
-                Usuarios oUsuarios = _BLLUsuarios.GetUsuariosById(this.txtUsuario.Text);
+                Usuarios oUsuarios = _BLLUsuarios.LoginUsuarios(this.txtUsuario.Text);
 
                 if (string.IsNullOrEmpty(this.txtUsuario.Text))
                 {
@@ -58,7 +58,7 @@ namespace UTN.Winform.Funeraria.UI
 
                 if (oUsuarios.Correo.Equals(this.txtUsuario.Text, StringComparison.CurrentCultureIgnoreCase) && oUsuarios.Contrasenna.Equals(this.txtContrasena.Text, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    
+
                     this.DialogResult = DialogResult.OK;
 
                 }
@@ -68,15 +68,11 @@ namespace UTN.Winform.Funeraria.UI
                     txtUsuario.Focus();
                 }
 
-
             }
             catch (Exception er)
             {
 
-                
                 throw er;
-
-               
 
             }
         }

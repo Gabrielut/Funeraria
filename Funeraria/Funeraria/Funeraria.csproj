@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\MantenimientoEnum.cs" />
     <Compile Include="Interfaces\IBLLActivo.cs" />
     <Compile Include="Interfaces\IBLLBarrio.cs" />
     <Compile Include="Interfaces\IBLLCanton.cs" />
@@ -256,9 +257,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Enum\" />
-    <Folder Include="Media\" />
+    <Content Include="Media\ReinaAngeles.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

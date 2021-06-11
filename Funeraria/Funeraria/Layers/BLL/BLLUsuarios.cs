@@ -35,10 +35,26 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DALUsuarios.GetUsuariosById(correo);
         }
 
+        public Usuarios LoginUsuarios(string pCorreo)
+        {
+            IDALUsuarios _DALUsuarios = new DALUsuarios();
+            return _DALUsuarios.LoginUsuarios(pCorreo);
+        }
+
         public Usuarios SaveUsuarios(Usuarios pUsuarios)
         {
             IDALUsuarios _DALUsuarios = new DALUsuarios();
-            return _DALUsuarios.SaveUsuarios(pUsuarios);
+            Usuarios oUsuarios = null;
+            if (_DALUsuarios.GetUsuariosById(pUsuarios.IDUsuario) == null)
+            {
+                oUsuarios = _DALUsuarios.SaveUsuarios(pUsuarios);
+            }
+            else
+            {
+                oUsuarios = _DALUsuarios.UpdateUsuarios(pUsuarios);
+            }
+
+            return oUsuarios;
         }
     }
 }
