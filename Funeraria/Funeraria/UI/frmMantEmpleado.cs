@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UTN.Winform.Funeraria.Interfaces;
@@ -68,11 +69,19 @@ namespace UTN.Winform.Funeraria.UI
             {
                 IBLLUsuarios _BllUsuario = new BLLUsuarios();
                 Usuarios oUsuarios = new Usuarios();
+                if (Regex.Match(this.txtContrasenna.Text, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,15})$").Success)
+                {
+                    MessageBox.Show("Siiiuuuu");
+                }
+                else
+                {
+                    throw new Exception();
+                }
                 oUsuarios.IDUsuario = this.txtCedula.Text;
                 oUsuarios.Nombre = this.txtNombre.Text;
                 oUsuarios.PrimerApellido = this.txtApellido1.Text;
                 oUsuarios.SegundoApellido = this.txtApellido2.Text;
-                oUsuarios.Correo = this.txtCorreo.Text;
+                oUsuarios.Correo = this.txtCorreo.Text;                
                 oUsuarios.Contrasenna = this.txtContrasenna.Text;
                 oUsuarios.Telefono = this.txtTelefono.Text;
                 oUsuarios.Sexo = (cboSexo.SelectedItem as Sexo).IdSexo;

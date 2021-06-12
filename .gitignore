@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Funeraria/Funeraria/UI/Form1.cs
+/Funeraria/Funeraria/UI/Form1.Designer.cs
+/Funeraria/Funeraria/UI/Form1.resx
+/Funeraria/Funeraria/UI/frmMantActivo.resx

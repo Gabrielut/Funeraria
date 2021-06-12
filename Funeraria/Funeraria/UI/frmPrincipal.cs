@@ -92,7 +92,7 @@ namespace UTN.Winform.Funeraria.UI
         {
             pnlMantenimientos.Visible = false;
             pnlReportes.Visible = false;
-            pnlHerramientas.Visible = false;           
+            pnlHerramientas.Visible = false;
         }
 
         public void esconderSubMenu() {
@@ -110,7 +110,7 @@ namespace UTN.Winform.Funeraria.UI
             {
                 pnlHerramientas.Visible = false;
             }
-            
+
 
         }
 
@@ -125,7 +125,7 @@ namespace UTN.Winform.Funeraria.UI
                 subMenu.Visible = true;
             }
 
-        
+
         }
 
         #region menuMantenimientos
@@ -306,10 +306,10 @@ namespace UTN.Winform.Funeraria.UI
             }
             else {
                 formulario.BringToFront();
-                
+
             }
-            
-          
+
+
         }
 
         #endregion
@@ -327,8 +327,31 @@ namespace UTN.Winform.Funeraria.UI
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-           
+            //acceso(Acceso.Administrador);
+
         }
+        private void acceso (Acceso pAcceso)
+        {
+            btnMantenimientos.Enabled = false;
+            btnMenuHerramientas.Enabled = false;
+            iconButton1.Enabled = false;
+            iconButton2.Enabled = false;
+           
+            switch (pAcceso)
+            {
+                case Acceso.Administrador:
+                    break;
+                case Acceso.Operaciones:
+                    break;
+                case Acceso.Reportes:
+                    break;
+                case Acceso.Cajas:
+                    break;
+            }
+        }
+            
+
+
         private void btnMantEmpleados_Click_1(object sender, EventArgs e)
         {
             esconderSubMenu();

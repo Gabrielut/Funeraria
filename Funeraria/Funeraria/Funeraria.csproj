@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\Acceso.cs" />
     <Compile Include="Enum\MantenimientoEnum.cs" />
     <Compile Include="Interfaces\IBLLActivo.cs" />
     <Compile Include="Interfaces\IBLLBarrio.cs" />
@@ -155,6 +156,12 @@
     <Compile Include="Layers\Entities\TipoPaquete.cs" />
     <Compile Include="Layers\Entities\TipoServicio.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +216,9 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
