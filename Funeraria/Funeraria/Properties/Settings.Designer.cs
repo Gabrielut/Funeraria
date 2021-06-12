@@ -48,7 +48,7 @@ namespace UTN.Winform.Funeraria.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("rfb.2021")]
         public string Password {
             get {
                 return ((string)(this["Password"]));

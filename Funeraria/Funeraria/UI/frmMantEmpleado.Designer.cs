@@ -29,6 +29,7 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
+
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnBorrar = new FontAwesome.Sharp.IconButton();
@@ -444,11 +445,13 @@ namespace UTN.Winform.Funeraria.UI
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
 
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private FontAwesome.Sharp.IconButton btnNuevo;
@@ -484,5 +487,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.TextBox txtCedula;
+
     }
 }
