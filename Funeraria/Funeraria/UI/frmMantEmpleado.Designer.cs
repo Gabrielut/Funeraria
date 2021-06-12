@@ -194,14 +194,14 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCorreo.Location = new System.Drawing.Point(172, 105);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(164, 20);
-            this.txtCorreo.TabIndex = 28;
+            this.txtCorreo.TabIndex = 8;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(172, 159);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(164, 20);
-            this.txtTelefono.TabIndex = 26;
+            this.txtTelefono.TabIndex = 10;
             // 
             // txtDireccion
             // 
@@ -209,7 +209,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(164, 34);
-            this.txtDireccion.TabIndex = 21;
+            this.txtDireccion.TabIndex = 14;
             // 
             // label11
             // 
@@ -226,7 +226,7 @@ namespace UTN.Winform.Funeraria.UI
             this.cboRol.Location = new System.Drawing.Point(172, 215);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(164, 21);
-            this.cboRol.TabIndex = 17;
+            this.cboRol.TabIndex = 12;
             // 
             // label9
             // 
@@ -251,7 +251,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtApellido1.Location = new System.Drawing.Point(172, 52);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Size = new System.Drawing.Size(164, 20);
-            this.txtApellido1.TabIndex = 5;
+            this.txtApellido1.TabIndex = 6;
             // 
             // label3
             // 
@@ -267,7 +267,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtNombre.Location = new System.Drawing.Point(172, 27);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(164, 20);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 5;
             // 
             // label1
             // 
@@ -301,7 +301,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtApellido2.Location = new System.Drawing.Point(172, 79);
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Size = new System.Drawing.Size(164, 20);
-            this.txtApellido2.TabIndex = 8;
+            this.txtApellido2.TabIndex = 7;
             // 
             // label6
             // 
@@ -318,7 +318,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtContrasenna.Name = "txtContrasenna";
             this.txtContrasenna.PasswordChar = '*';
             this.txtContrasenna.Size = new System.Drawing.Size(164, 20);
-            this.txtContrasenna.TabIndex = 11;
+            this.txtContrasenna.TabIndex = 9;
             // 
             // label7
             // 
@@ -344,7 +344,7 @@ namespace UTN.Winform.Funeraria.UI
             this.cboSexo.Location = new System.Drawing.Point(172, 186);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(164, 21);
-            this.cboSexo.TabIndex = 15;
+            this.cboSexo.TabIndex = 11;
             // 
             // label10
             // 
@@ -360,7 +360,7 @@ namespace UTN.Winform.Funeraria.UI
             this.dtpFechaNac.Location = new System.Drawing.Point(172, 243);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(164, 20);
-            this.dtpFechaNac.TabIndex = 19;
+            this.dtpFechaNac.TabIndex = 13;
             // 
             // btnCancelar
             // 
@@ -370,7 +370,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnCancelar.Location = new System.Drawing.Point(172, 310);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(147, 45);
-            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -384,7 +384,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnAceptar.Location = new System.Drawing.Point(3, 310);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(124, 45);
-            this.btnAceptar.TabIndex = 22;
+            this.btnAceptar.TabIndex = 15;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -395,7 +395,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCedula.Location = new System.Drawing.Point(172, 3);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(164, 20);
-            this.txtCedula.TabIndex = 27;
+            this.txtCedula.TabIndex = 4;
             // 
             // dgvDatos
             // 
@@ -407,7 +407,7 @@ namespace UTN.Winform.Funeraria.UI
             this.dgvDatos.Location = new System.Drawing.Point(12, 62);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(417, 358);
-            this.dgvDatos.TabIndex = 3;
+            this.dgvDatos.TabIndex = 17;
             // 
             // Nombre
             // 

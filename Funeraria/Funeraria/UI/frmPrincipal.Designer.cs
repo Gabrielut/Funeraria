@@ -459,6 +459,7 @@
             this.btnMantActivos.Text = "Activos";
             this.btnMantActivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantActivos.UseVisualStyleBackColor = false;
+            this.btnMantActivos.Click += new System.EventHandler(this.btnMantActivos_Click_1);
             // 
             // btnMantenimientos
             // 
@@ -516,6 +517,7 @@
             this.pnlFormularios.Name = "pnlFormularios";
             this.pnlFormularios.Size = new System.Drawing.Size(1028, 697);
             this.pnlFormularios.TabIndex = 4;
+            this.pnlFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFormularios_Paint);
             // 
             // frmPrincipal
             // 
