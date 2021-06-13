@@ -145,6 +145,7 @@
     <Compile Include="Layers\Entities\DetFactura.cs" />
     <Compile Include="Layers\Entities\DireccionCompleta.cs" />
     <Compile Include="Layers\Entities\Distrito.cs" />
+    <Compile Include="Layers\Entities\DTO\ActivoDTO.cs" />
     <Compile Include="Layers\Entities\EncFactura.cs" />
     <Compile Include="Layers\Entities\Funerarias.cs" />
     <Compile Include="Layers\Entities\Paquete.cs" />
@@ -156,12 +157,6 @@
     <Compile Include="Layers\Entities\TipoPaquete.cs" />
     <Compile Include="Layers\Entities\TipoServicio.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
-    <Compile Include="UI\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,9 +211,6 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +262,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Media\ReinaAngeles.jpeg" />
+    <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

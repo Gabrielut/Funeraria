@@ -29,7 +29,6 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
-
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnBorrar = new FontAwesome.Sharp.IconButton();
@@ -57,9 +56,12 @@ namespace UTN.Winform.Funeraria.UI
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.btnAceptar = new FontAwesome.Sharp.IconButton();
             this.txtCedula = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.rdbHabilitar = new System.Windows.Forms.RadioButton();
+            this.btnAceptar = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.rdbDesabilitar = new System.Windows.Forms.RadioButton();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -169,53 +171,58 @@ namespace UTN.Winform.Funeraria.UI
             this.tableLayoutPanel1.Controls.Add(this.cboSexo, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.dtpFechaNac, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.txtCedula, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.rdbHabilitar, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.rdbDesabilitar, 1, 12);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(449, 65);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.21429F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.78571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.RowCount = 14;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.36842F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.63158F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(339, 359);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(339, 373);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(172, 105);
+            this.txtCorreo.Location = new System.Drawing.Point(172, 107);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(164, 20);
             this.txtCorreo.TabIndex = 8;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(172, 159);
+            this.txtTelefono.Location = new System.Drawing.Point(172, 156);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(164, 20);
             this.txtTelefono.TabIndex = 10;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(172, 270);
+            this.txtDireccion.Location = new System.Drawing.Point(172, 249);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(164, 34);
+            this.txtDireccion.Size = new System.Drawing.Size(164, 26);
             this.txtDireccion.TabIndex = 14;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 267);
+            this.label11.Location = new System.Drawing.Point(3, 246);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 20;
@@ -224,7 +231,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboRol
             // 
             this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(172, 215);
+            this.cboRol.Location = new System.Drawing.Point(172, 203);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(164, 21);
             this.cboRol.TabIndex = 12;
@@ -232,7 +239,7 @@ namespace UTN.Winform.Funeraria.UI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 212);
+            this.label9.Location = new System.Drawing.Point(3, 200);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 13);
             this.label9.TabIndex = 16;
@@ -241,7 +248,7 @@ namespace UTN.Winform.Funeraria.UI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 102);
+            this.label5.Location = new System.Drawing.Point(3, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 7;
@@ -249,7 +256,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtApellido1
             // 
-            this.txtApellido1.Location = new System.Drawing.Point(172, 52);
+            this.txtApellido1.Location = new System.Drawing.Point(172, 55);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Size = new System.Drawing.Size(164, 20);
             this.txtApellido1.TabIndex = 6;
@@ -257,7 +264,7 @@ namespace UTN.Winform.Funeraria.UI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 49);
+            this.label3.Location = new System.Drawing.Point(3, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 4;
@@ -265,7 +272,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(172, 27);
+            this.txtNombre.Location = new System.Drawing.Point(172, 28);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(164, 20);
             this.txtNombre.TabIndex = 5;
@@ -282,7 +289,7 @@ namespace UTN.Winform.Funeraria.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 24);
+            this.label2.Location = new System.Drawing.Point(3, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 2;
@@ -291,7 +298,7 @@ namespace UTN.Winform.Funeraria.UI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 76);
+            this.label4.Location = new System.Drawing.Point(3, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 6;
@@ -299,7 +306,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtApellido2
             // 
-            this.txtApellido2.Location = new System.Drawing.Point(172, 79);
+            this.txtApellido2.Location = new System.Drawing.Point(172, 81);
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Size = new System.Drawing.Size(164, 20);
             this.txtApellido2.TabIndex = 7;
@@ -307,7 +314,7 @@ namespace UTN.Winform.Funeraria.UI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 129);
+            this.label6.Location = new System.Drawing.Point(3, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 9;
@@ -315,7 +322,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtContrasenna
             // 
-            this.txtContrasenna.Location = new System.Drawing.Point(172, 132);
+            this.txtContrasenna.Location = new System.Drawing.Point(172, 131);
             this.txtContrasenna.Name = "txtContrasenna";
             this.txtContrasenna.PasswordChar = '*';
             this.txtContrasenna.Size = new System.Drawing.Size(164, 20);
@@ -324,7 +331,7 @@ namespace UTN.Winform.Funeraria.UI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 156);
+            this.label7.Location = new System.Drawing.Point(3, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 12;
@@ -333,7 +340,7 @@ namespace UTN.Winform.Funeraria.UI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 183);
+            this.label8.Location = new System.Drawing.Point(3, 176);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 14;
@@ -342,7 +349,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboSexo
             // 
             this.cboSexo.FormattingEnabled = true;
-            this.cboSexo.Location = new System.Drawing.Point(172, 186);
+            this.cboSexo.Location = new System.Drawing.Point(172, 179);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(164, 21);
             this.cboSexo.TabIndex = 11;
@@ -350,7 +357,7 @@ namespace UTN.Winform.Funeraria.UI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 240);
+            this.label10.Location = new System.Drawing.Point(3, 223);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 13);
             this.label10.TabIndex = 18;
@@ -358,38 +365,10 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(172, 243);
+            this.dtpFechaNac.Location = new System.Drawing.Point(172, 226);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(164, 20);
             this.dtpFechaNac.TabIndex = 13;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Cannabis;
-            this.btnCancelar.IconColor = System.Drawing.Color.Black;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.Location = new System.Drawing.Point(172, 310);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 45);
-            this.btnCancelar.TabIndex = 16;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnAceptar.IconColor = System.Drawing.Color.Black;
-            this.btnAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAceptar.Location = new System.Drawing.Point(3, 310);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(124, 45);
-            this.btnAceptar.TabIndex = 15;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtCedula
             // 
@@ -397,6 +376,65 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(164, 20);
             this.txtCedula.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 278);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Estado";
+            // 
+            // rdbHabilitar
+            // 
+            this.rdbHabilitar.AutoSize = true;
+            this.rdbHabilitar.Location = new System.Drawing.Point(172, 281);
+            this.rdbHabilitar.Name = "rdbHabilitar";
+            this.rdbHabilitar.Size = new System.Drawing.Size(63, 17);
+            this.rdbHabilitar.TabIndex = 22;
+            this.rdbHabilitar.TabStop = true;
+            this.rdbHabilitar.Text = "Habilitar";
+            this.rdbHabilitar.UseVisualStyleBackColor = true;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnAceptar.IconColor = System.Drawing.Color.Black;
+            this.btnAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAceptar.Location = new System.Drawing.Point(3, 327);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(124, 43);
+            this.btnAceptar.TabIndex = 15;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Cannabis;
+            this.btnCancelar.IconColor = System.Drawing.Color.Black;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.Location = new System.Drawing.Point(172, 327);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(147, 43);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // rdbDesabilitar
+            // 
+            this.rdbDesabilitar.AutoSize = true;
+            this.rdbDesabilitar.Location = new System.Drawing.Point(172, 304);
+            this.rdbDesabilitar.Name = "rdbDesabilitar";
+            this.rdbDesabilitar.Size = new System.Drawing.Size(74, 17);
+            this.rdbDesabilitar.TabIndex = 23;
+            this.rdbDesabilitar.TabStop = true;
+            this.rdbDesabilitar.Text = "Desabilitar";
+            this.rdbDesabilitar.UseVisualStyleBackColor = true;
             // 
             // dgvDatos
             // 
@@ -432,7 +470,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 477);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStripContainer1);
@@ -445,7 +483,6 @@ namespace UTN.Winform.Funeraria.UI
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-
             this.ResumeLayout(false);
 
         }
@@ -487,6 +524,8 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.TextBox txtCedula;
-
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton rdbHabilitar;
+        private System.Windows.Forms.RadioButton rdbDesabilitar;
     }
 }

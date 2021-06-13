@@ -63,6 +63,75 @@ namespace UTN.Winform.Funeraria.UI
             this.cboSexo.SelectedIndex = 0;
             this.cboRol.SelectedIndex = 0;
         }
+        private void CambiarEstado(MantenimientoEnum estado)
+        {
+            this.txtCedula.Text = "";
+            this.txtNombre.Text = "";
+            this.txtApellido1.Text = "";
+            this.txtApellido2.Text = "";
+            this.txtCorreo.Text = "";
+            this.txtContrasenna.Text = "";
+            this.txtTelefono.Text = "";
+            this.txtDireccion.Text = "";
+
+            this.txtCedula.Enabled = false;
+            this.txtNombre.Enabled = false;
+            this.txtApellido1.Enabled = false;
+            this.txtApellido2.Enabled = false;
+            this.txtCorreo.Enabled = false;
+            this.txtContrasenna.Enabled = false;
+            this.txtTelefono.Enabled = false;
+            this.cboSexo.SelectedIndex = 0;
+            this.cboRol.SelectedIndex = 0;
+            this.cboSexo.Enabled = false;
+            this.cboRol.Enabled = false;
+            this.dtpFechaNac.Value = DateTime.Now;
+            this.dtpFechaNac.Enabled = false;
+            this.txtDireccion.Enabled = false;
+            this.btnAceptar.Enabled = false;
+            this.btnCancelar.Enabled = false;
+            this.rdbHabilitar.Enabled = false;
+            this.rdbDesabilitar.Enabled = false;
+
+            switch (estado)
+            {
+                case MantenimientoEnum.Nuevo:
+                    this.txtCedula.Enabled = true;
+                    this.txtNombre.Enabled = true;
+                    this.txtApellido1.Enabled = true;
+                    this.txtApellido2.Enabled = true;
+                    this.txtCorreo.Enabled = true;
+                    this.txtContrasenna.Enabled = true;
+                    this.txtTelefono.Enabled = true;
+                    this.txtDireccion.Enabled = true;
+                    this.cboSexo.Enabled = true;
+                    this.cboRol.Enabled = true;
+                    this.dtpFechaNac.Enabled = true;
+                    this.txtCedula.Focus();
+                    this.btnAceptar.Enabled = true;
+                    this.btnCancelar.Enabled = true;
+                    this.rdbHabilitar.Enabled = true;
+                    this.rdbDesabilitar.Enabled = true;
+                    break;
+                case MantenimientoEnum.Editar:
+                    this.txtCedula.Enabled = false;
+                    this.txtNombre.Enabled = true;
+                    this.txtApellido1.Enabled = true;
+                    this.txtApellido2.Enabled = true;
+                    this.txtCorreo.Enabled = false;
+                    this.txtContrasenna.Enabled = true;
+                    this.txtTelefono.Enabled = true;
+                    this.txtDireccion.Enabled = true;
+                    this.rdbHabilitar.Enabled = true;
+                    this.rdbDesabilitar.Enabled = true;
+                    this.txtNombre.Focus();
+                    break;
+                case MantenimientoEnum.Borrar:
+                    break;
+                case MantenimientoEnum.Ninguno:
+                    break;
+            }
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -101,7 +170,6 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
-            llenarDatos();
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -166,70 +234,7 @@ namespace UTN.Winform.Funeraria.UI
             {
 
             }
-        }
-        private void CambiarEstado(MantenimientoEnum estado)
-        {
-            this.txtCedula.Text = "";
-            this.txtNombre.Text = "";
-            this.txtApellido1.Text = "";
-            this.txtApellido2.Text = "";
-            this.txtCorreo.Text = "";
-            this.txtContrasenna.Text = "";
-            this.txtTelefono.Text = "";
-            this.txtDireccion.Text = "";
-
-            this.txtCedula.Enabled = false;
-            this.txtNombre.Enabled = false;
-            this.txtApellido1.Enabled = false;
-            this.txtApellido2.Enabled = false;
-            this.txtCorreo.Enabled = false;
-            this.txtContrasenna.Enabled = false;
-            this.txtTelefono.Enabled = false;
-            this.cboSexo.SelectedIndex = 0;
-            this.cboRol.SelectedIndex = 0;
-            this.cboSexo.Enabled = false;
-            this.cboRol.Enabled = false;
-            this.dtpFechaNac.Value = DateTime.Now;
-            this.dtpFechaNac.Enabled = false;
-            this.txtDireccion.Enabled = false;
-            this.btnAceptar.Enabled = false;
-            this.btnCancelar.Enabled = false;
-
-            switch (estado)
-            {
-                case MantenimientoEnum.Nuevo:
-                    this.txtCedula.Enabled = true;
-                    this.txtNombre.Enabled = true;
-                    this.txtApellido1.Enabled = true;
-                    this.txtApellido2.Enabled = true;
-                    this.txtCorreo.Enabled = true;
-                    this.txtContrasenna.Enabled = true;
-                    this.txtTelefono.Enabled = true;
-                    this.txtDireccion.Enabled = true;
-                    this.cboSexo.Enabled = true;
-                    this.cboRol.Enabled = true;
-                    this.dtpFechaNac.Enabled = true;
-                    this.txtCedula.Focus();
-                    this.btnAceptar.Enabled = true;
-                    this.btnCancelar.Enabled = true;
-                    break;
-                case MantenimientoEnum.Editar:
-                    this.txtCedula.Enabled = false;
-                    this.txtNombre.Enabled = true;
-                    this.txtApellido1.Enabled = true;
-                    this.txtApellido2.Enabled = true;
-                    this.txtCorreo.Enabled = false;
-                    this.txtContrasenna.Enabled = true;
-                    this.txtTelefono.Enabled = true;
-                    this.txtDireccion.Enabled = true;
-                    this.txtNombre.Focus();
-                    break;
-                case MantenimientoEnum.Borrar:
-                    break;
-                case MantenimientoEnum.Ninguno:
-                    break;
-            }
-        }
+        }       
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
