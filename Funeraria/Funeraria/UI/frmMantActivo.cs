@@ -73,8 +73,8 @@ namespace UTN.Winform.Funeraria.UI
         }
 
         #endregion
-        #region Mantenimientos
 
+        #region Mantenimientos
         private void frmMantActivo_Load(object sender, EventArgs e)
         {
             llenarDatos();
@@ -105,6 +105,72 @@ namespace UTN.Winform.Funeraria.UI
             this.cbBoxEstado.Items.Add("Inactivo");
             this.cbBoxEstado.SelectedIndex = 0;
             this.cbBoxTipoActivo.SelectedIndex = 0;
+        }
+        private void CambiarEstado(MantenimientoEnum estado)
+        {
+            IBLLActivo _BllActivo = new BLLActivo();
+            this.txtIdActivo.Text = "";
+            this.txtNombre.Text = "";
+            this.txtDescripcion.Text = "";
+            this.txtDetalles.Text = "";
+            this.txtCantidad.Text = "1";
+            this.txtPrecio.Text = "";
+            this.txtPrecio.DecimalPlaces = 2;
+            this.txtCosto.Text = "";
+            this.txtCosto.DecimalPlaces = 2;
+            this.cbBoxTipoActivo.SelectedIndex = 0;
+            this.cbBoxEstado.SelectedIndex = 0;
+            this.pbImage.Image = Funeraria.Properties.Resources.download;
+            this.pbImage.SizeMode = PictureBoxSizeMode.Zoom;
+
+            this.txtIdActivo.Enabled = false;
+            this.txtNombre.Enabled = false;
+            this.txtDescripcion.Enabled = false;
+            this.txtDetalles.Enabled = false;
+            this.txtCantidad.Enabled = false;
+            this.txtPrecio.Enabled = false;
+            this.txtCosto.Enabled = false;
+            this.cbBoxTipoActivo.Enabled = false;
+            this.cbBoxEstado.Enabled = false;
+            this.pbImage.Enabled = false;
+
+            switch (estado)
+            {
+                case MantenimientoEnum.Nuevo:
+                    this.txtIdActivo.Text = _BllActivo.GetNextNumeroActivo().ToString();
+                    this.txtIdActivo.Enabled = false;
+                    this.txtNombre.Enabled = true;
+                    this.txtDescripcion.Enabled = true;
+                    this.txtDetalles.Enabled = true;
+                    this.txtCantidad.Enabled = true;
+                    this.txtPrecio.Enabled = true;
+                    this.txtPrecio.DecimalPlaces = 2;
+                    this.txtCosto.Enabled = true;
+                    this.txtCosto.DecimalPlaces = 2;
+                    this.cbBoxTipoActivo.Enabled = true;
+                    this.cbBoxEstado.Enabled = true;
+                    this.pbImage.Enabled = true;
+
+                    this.txtNombre.Focus();
+                    break;
+                case MantenimientoEnum.Editar:
+                    this.txtIdActivo.Enabled = false;
+                    this.txtNombre.Enabled = true;
+                    this.txtDescripcion.Enabled = true;
+                    this.txtDetalles.Enabled = true;
+                    this.txtCantidad.Enabled = true;
+                    this.txtPrecio.Enabled = true;
+                    this.txtCosto.Enabled = true;
+                    this.cbBoxTipoActivo.Enabled = true;
+                    this.cbBoxEstado.Enabled = true;
+                    this.pbImage.Enabled = true;
+                    this.txtNombre.Focus();
+                    break;
+                case MantenimientoEnum.Borrar:
+                    break;
+                case MantenimientoEnum.Ninguno:
+                    break;
+            }
         }
         private void btnGuardar2_Click(object sender, EventArgs e)
         {
@@ -245,72 +311,6 @@ namespace UTN.Winform.Funeraria.UI
 
             }
         }
-        private void CambiarEstado(MantenimientoEnum estado)
-        {
-            IBLLActivo _BllActivo = new BLLActivo();
-            this.txtIdActivo.Text = "";
-            this.txtNombre.Text = "";
-            this.txtDescripcion.Text = "";
-            this.txtDetalles.Text = "";
-            this.txtCantidad.Text = "1";
-            this.txtPrecio.Text = "";
-            this.txtPrecio.DecimalPlaces = 2;
-            this.txtCosto.Text = "";
-            this.txtCosto.DecimalPlaces = 2;
-            this.cbBoxTipoActivo.SelectedIndex = 0;
-            this.cbBoxEstado.SelectedIndex = 0;
-            this.pbImage.Image = Funeraria.Properties.Resources.download;
-            this.pbImage.SizeMode = PictureBoxSizeMode.Zoom;
-
-            this.txtIdActivo.Enabled = false;
-            this.txtNombre.Enabled = false;
-            this.txtDescripcion.Enabled = false;
-            this.txtDetalles.Enabled = false;
-            this.txtCantidad.Enabled = false;
-            this.txtPrecio.Enabled = false;
-            this.txtCosto.Enabled = false;
-            this.cbBoxTipoActivo.Enabled = false;
-            this.cbBoxEstado.Enabled = false;
-            this.pbImage.Enabled = false;
-
-            switch (estado)
-            {
-                case MantenimientoEnum.Nuevo:
-                    this.txtIdActivo.Text = _BllActivo.GetNextNumeroActivo().ToString();
-                    this.txtIdActivo.Enabled = false;
-                    this.txtNombre.Enabled = true;
-                    this.txtDescripcion.Enabled = true;
-                    this.txtDetalles.Enabled = true;
-                    this.txtCantidad.Enabled = true;
-                    this.txtPrecio.Enabled = true;
-                    this.txtPrecio.DecimalPlaces = 2;
-                    this.txtCosto.Enabled = true;
-                    this.txtCosto.DecimalPlaces = 2;
-                    this.cbBoxTipoActivo.Enabled = true;
-                    this.cbBoxEstado.Enabled = true;
-                    this.pbImage.Enabled = true;
-
-                    this.txtNombre.Focus();
-                    break;
-                case MantenimientoEnum.Editar:
-                    this.txtIdActivo.Enabled = false;
-                    this.txtNombre.Enabled = true;
-                    this.txtDescripcion.Enabled = true;
-                    this.txtDetalles.Enabled = true;
-                    this.txtCantidad.Enabled = true;
-                    this.txtPrecio.Enabled = true;
-                    this.txtCosto.Enabled = true;
-                    this.cbBoxTipoActivo.Enabled = true;
-                    this.cbBoxEstado.Enabled = true;
-                    this.pbImage.Enabled = true;
-                    this.txtNombre.Focus();
-                    break;
-                case MantenimientoEnum.Borrar:
-                    break;
-                case MantenimientoEnum.Ninguno:
-                    break;
-            }
-        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
@@ -336,10 +336,6 @@ namespace UTN.Winform.Funeraria.UI
             }
         }
         #endregion
-        //private void btnMaximizar_Click(object sender, EventArgs e)
-        //{
-        //    this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-        //    this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-        //}
+
     }
 }

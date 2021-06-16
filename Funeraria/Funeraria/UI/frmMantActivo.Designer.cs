@@ -40,6 +40,10 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado = new System.Windows.Forms.Label();
             this.pnlLinea = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCosto = new System.Windows.Forms.NumericUpDown();
+            this.txtPrecio = new System.Windows.Forms.NumericUpDown();
+            this.txtIdActivo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.cbBoxEstado = new System.Windows.Forms.ComboBox();
@@ -86,18 +90,14 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTListado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTEstado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTCantidad = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdActivo = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.NumericUpDown();
-            this.txtCosto = new System.Windows.Forms.NumericUpDown();
             this.pnlMenu.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -266,6 +266,39 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
+            // 
+            // txtCosto
+            // 
+            this.txtCosto.DecimalPlaces = 2;
+            this.txtCosto.Location = new System.Drawing.Point(673, 33);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(100, 24);
+            this.txtCosto.TabIndex = 29;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.DecimalPlaces = 2;
+            this.txtPrecio.Location = new System.Drawing.Point(673, 82);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 24);
+            this.txtPrecio.TabIndex = 28;
+            // 
+            // txtIdActivo
+            // 
+            this.txtIdActivo.Enabled = false;
+            this.txtIdActivo.Location = new System.Drawing.Point(146, 16);
+            this.txtIdActivo.Name = "txtIdActivo";
+            this.txtIdActivo.Size = new System.Drawing.Size(132, 24);
+            this.txtIdActivo.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 16);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Id";
             // 
             // pbImage
             // 
@@ -623,39 +656,6 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.toolTCantidad.IsBalloon = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Id";
-            // 
-            // txtIdActivo
-            // 
-            this.txtIdActivo.Enabled = false;
-            this.txtIdActivo.Location = new System.Drawing.Point(146, 16);
-            this.txtIdActivo.Name = "txtIdActivo";
-            this.txtIdActivo.Size = new System.Drawing.Size(132, 24);
-            this.txtIdActivo.TabIndex = 27;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.DecimalPlaces = 2;
-            this.txtPrecio.Location = new System.Drawing.Point(673, 82);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 24);
-            this.txtPrecio.TabIndex = 28;
-            // 
-            // txtCosto
-            // 
-            this.txtCosto.DecimalPlaces = 2;
-            this.txtCosto.Location = new System.Drawing.Point(673, 33);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(100, 24);
-            this.txtCosto.TabIndex = 29;
-            // 
             // frmMantActivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,11 +673,11 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenido.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).EndInit();
             this.ResumeLayout(false);
 
         }
