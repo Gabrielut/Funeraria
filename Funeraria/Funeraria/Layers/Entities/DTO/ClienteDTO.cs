@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UTN.Winform.Funeraria.Layers.Entities
+namespace UTN.Winform.Funeraria.Layers.Entities.DTO
 {
-    class Cliente
+    class ClienteDTO
     {
+
         public int IdCliente { get; set; }
         public string Nombre { get; set; }
         public string PrimerApellido { get; set; }
