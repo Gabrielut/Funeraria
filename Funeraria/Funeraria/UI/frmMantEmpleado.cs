@@ -19,6 +19,7 @@ namespace UTN.Winform.Funeraria.UI
         public frmMantEmpleado()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
@@ -252,5 +253,10 @@ namespace UTN.Winform.Funeraria.UI
             Close();
         }
         #endregion
+
+        private void toolStripContainer1_ContentPanel_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
