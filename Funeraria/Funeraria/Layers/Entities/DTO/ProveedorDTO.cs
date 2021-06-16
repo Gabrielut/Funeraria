@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UTN.Winform.Funeraria.Layers.Entities
+namespace UTN.Winform.Funeraria.Layers.Entities.DTO
 {
-    class Proveedor
+    class ProveedorDTO
     {
         public int IdProveedor { get; set; }
         public string NomProveedor { get; set; }
@@ -15,9 +15,9 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string TelProveedor { get; set; }
         public string TelFax { get; set; }
         public string Correo { get; set; }
-        public int IdTipoServicio { get; set; }
+        public string Servicio { get; set; }
         public int CantUni { get; set; }
         public float Precio { get; set; }
-        public bool Estado { get; set; }
+        public string Estado { get; set; }
     }
 }

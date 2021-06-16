@@ -42,12 +42,10 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 return false;
             }
         }
-
         public List<Activo> GetActivoByFilter(string pDescripcion)
         {
             throw new NotImplementedException();
         }
-
         public Activo GetActivoById(int pActivo)
         {
             DataSet ds = null;
@@ -95,7 +93,6 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 throw;
             }
         }
-
         public List<ActivoDTO> GetAllActivos()
         {
             DataSet ds = null;
@@ -151,7 +148,6 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             return lista;
         }
-
         public int GetNextNumeroActivo()
         {
             DataSet ds = null;
@@ -183,7 +179,6 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 throw;
             }
         }
-
         public Activo SaveActivo(Activo pActivo)
         {
             Activo oActivo = null;
@@ -231,7 +226,6 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             return oActivo;
         }
-
         public Activo UpdateActivo(Activo pActivo)
         {
             Activo oActivo = null;

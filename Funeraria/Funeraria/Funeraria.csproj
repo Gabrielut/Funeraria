@@ -146,6 +146,8 @@
     <Compile Include="Layers\Entities\DireccionCompleta.cs" />
     <Compile Include="Layers\Entities\Distrito.cs" />
     <Compile Include="Layers\Entities\DTO\ActivoDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\PaqueteDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\ProveedorDTO.cs" />
     <Compile Include="Layers\Entities\EncFactura.cs" />
     <Compile Include="Layers\Entities\Funerarias.cs" />
     <Compile Include="Layers\Entities\Paquete.cs" />

@@ -26,7 +26,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             List<TipoActivo> lista = new List<TipoActivo>();
             SqlCommand command = new SqlCommand();
 
-            string sql = @" select * from  TipoActivo WITH (NOLOCK) where estado = 1  ";
+            string sql = @" select * from  TipoActivo WITH (NOLOCK)";
             command.CommandText = sql;
             command.CommandType = CommandType.Text;
 
