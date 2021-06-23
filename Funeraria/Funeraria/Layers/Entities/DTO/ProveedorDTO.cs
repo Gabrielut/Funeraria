@@ -17,7 +17,9 @@ namespace UTN.Winform.Funeraria.Layers.Entities.DTO
         public string Correo { get; set; }
         public string Servicio { get; set; }
         public int CantUni { get; set; }
-        public float Precio { get; set; }
+        public string Precio { get; set; }
         public string Estado { get; set; }
+
+        public override string ToString() => $"{NomProveedor} ";
     }
 }

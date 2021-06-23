@@ -18,7 +18,7 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DalPaquete.DaletePaquete(pId);
         }
 
-        public List<PaqueteDTO> GetAllPaquete()
+        public List<Paquete> GetAllPaquete()
         {
             IDALPaquete _DalPaquete = new DALPaquete();
             return _DalPaquete.GetAllPaquete();

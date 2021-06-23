@@ -84,12 +84,44 @@ namespace UTN.Winform.Funeraria.UI
         public void llenarDatos()
         {
             IBLLActivo _BLLActivo = new BLLActivo();
-            List<ActivoDTO> lista = _BLLActivo.GetAllActivos();
+            IBLLTipoActivo _BLLTipoActivo = new BLLTipoActivo();
+            List<Activo> lista = _BLLActivo.GetAllActivos();
+            List<TipoActivo> listaTipo = _BLLTipoActivo.GetAllTipoActivo();
+            List<ActivoDTO> listaActivosDTO = new List<ActivoDTO>();            
             dGVListadoActivos.AutoGenerateColumns = false;
             dGVListadoActivos.RowTemplate.Height = 50;
             dGVListadoActivos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dGVListadoActivos.DataSource = lista;
-
+            String desc = "";
+            foreach (Activo item in lista)
+            {
+                ActivoDTO oActivoDto = new ActivoDTO();
+                foreach (TipoActivo act in listaTipo)
+                {
+                    if (act.IdTipoActivo == item.TipoActivo)
+                    {
+                        desc = act.Descripcion;
+                    }
+                }
+                oActivoDto.IdActivo = item.IdActivo;
+                oActivoDto.Nombre = item.Nombre;
+                oActivoDto.Descripcion = item.Descripcion;
+                oActivoDto.TipoActivo = desc;
+                oActivoDto.Cantidad = item.Cantidad;
+                oActivoDto.Costo = item.Costo.ToString("₡" + "#,##0");
+                oActivoDto.Precio = item.Precio.ToString("₡" + "#,##0");
+                oActivoDto.InformacionAdicional = item.InformacionAdicional;
+                oActivoDto.Img = item.Img;
+                if (item.Estado == true)
+                {
+                    oActivoDto.Estado = "Activo";
+                }
+                else
+                {
+                    oActivoDto.Estado = "Inactivo";
+                }
+                listaActivosDTO.Add(oActivoDto);
+            }
+            dGVListadoActivos.DataSource = listaActivosDTO;
         }
         public void llenarCombos()
         {
@@ -115,9 +147,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtDetalles.Text = "";
             this.txtCantidad.Text = "1";
             this.txtPrecio.Text = "";
-            this.txtPrecio.DecimalPlaces = 2;
             this.txtCosto.Text = "";
-            this.txtCosto.DecimalPlaces = 2;
             this.cbBoxTipoActivo.SelectedIndex = 0;
             this.cbBoxEstado.SelectedIndex = 0;
             this.pbImage.Image = Funeraria.Properties.Resources.download;
@@ -144,9 +174,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtDetalles.Enabled = true;
                     this.txtCantidad.Enabled = true;
                     this.txtPrecio.Enabled = true;
-                    this.txtPrecio.DecimalPlaces = 2;
                     this.txtCosto.Enabled = true;
-                    this.txtCosto.DecimalPlaces = 2;
                     this.cbBoxTipoActivo.Enabled = true;
                     this.cbBoxEstado.Enabled = true;
                     this.pbImage.Enabled = true;
@@ -177,6 +205,43 @@ namespace UTN.Winform.Funeraria.UI
             btnGuardar2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnGuardar2.Width, btnGuardar2.Height, 10, 5));
             try
             {
+                errPro.Clear();
+                if (this.pbImage.Tag == null || this.pbImage.Tag.Equals(""))
+                {
+                    errPro.SetError(pbImage, "Imagen requerida");
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtNombre.Text))
+                {
+                    errPro.SetError(txtNombre, "Nombre requerido");
+                    this.txtNombre.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtDescripcion.Text))
+                {
+                    errPro.SetError(txtDescripcion, "Descripcion requerida");
+                    this.txtDescripcion.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtDetalles.Text))
+                {
+                    errPro.SetError(txtDetalles, "Detalles requeridos");
+                    this.txtDetalles.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtCosto.Text))
+                {
+                    errPro.SetError(txtCosto, "Costo requerido");
+                    this.txtCosto.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtPrecio.Text))
+                {
+                    errPro.SetError(txtPrecio, "Precio requerido");
+                    this.txtPrecio.Focus();
+                    return;
+                }
+               
                 IBLLActivo _BllActivo = new BLLActivo();
                 Activo oActivo = new Activo();
                 oActivo.IdActivo = int.Parse(this.txtIdActivo.Text);
@@ -208,6 +273,9 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
+            llenarCombos();
+            llenarDatos();
+            CambiarEstado(MantenimientoEnum.Ninguno);
         }
         private void pbImage_Click(object sender, EventArgs e)
         {

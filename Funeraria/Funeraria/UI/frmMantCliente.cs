@@ -22,14 +22,6 @@ namespace UTN.Winform.Funeraria.UI
             this.WindowState = FormWindowState.Maximized;
         }
 
-      
-
-        //public void llenarCombos()
-        //{
-            
-
-        //}
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -40,16 +32,54 @@ namespace UTN.Winform.Funeraria.UI
             this.Close();
         }
 
-        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             
             try
             {
+                errPro.Clear();
+                if (string.IsNullOrEmpty(this.txtId.Text))
+                {
+                    errPro.SetError(txtId, "Cedula requerido");
+                    this.txtId.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtNombre.Text))
+                {
+                    errPro.SetError(txtNombre, "Nombre requerido");
+                    this.txtNombre.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtApellido1.Text))
+                {
+                    errPro.SetError(txtApellido1, "Apellido requerido");
+                    this.txtApellido1.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtApellido2.Text))
+                {
+                    errPro.SetError(txtApellido2, "Apellido requerido");
+                    this.txtApellido2.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtCorreo.Text))
+                {
+                    errPro.SetError(txtCorreo, "Correo requerido");
+                    this.txtCorreo.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtTelefono.Text))
+                {
+                    errPro.SetError(txtTelefono, "Telefono requerido");
+                    this.txtTelefono.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.rTxtDireccion.Text))
+                {
+                    errPro.SetError(rTxtDireccion, "Direccion requerido");
+                    this.rTxtDireccion.Focus();
+                    return;
+                }
                 IBLLCliente _BllCliente = new BLLCLiente();
 
                 Cliente oCliente = new Cliente();
@@ -59,8 +89,16 @@ namespace UTN.Winform.Funeraria.UI
                 oCliente.PrimerApellido = this.txtApellido1.Text;
                 oCliente.SegundoApellido = this.txtApellido2.Text;             
                 oCliente.Correo = this.txtCorreo.Text;
-                oCliente.Telefono = this.txtTelefono.Text;        
-                oCliente.Sexo = (int)this.cBoxSexo.SelectedIndex;
+                oCliente.Telefono = this.txtTelefono.Text;
+                if (this.cBoxSexo.SelectedIndex == 0)
+                {
+                    oCliente.Sexo = false;
+                }
+                else
+                {
+                    oCliente.Sexo = true;
+                }
+                
                 oCliente.Direccion = this.rTxtDireccion.Text;
 
                 oCliente = _BllCliente.SaveCliente(oCliente);
@@ -77,22 +115,46 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
+            CargarDatos();
         }
-
 
         public void CargarDatos()
         {
             IBLLCliente _BllCliente = new BLLCLiente();
-                    
+            IBLLSexo _BLLSexo = new BLLSexo();
 
             CambiarEstado(MantenimientoEnum.Ninguno);
-
+            List<Cliente> lista = _BllCliente.GetAllCliente();
+            List<ClienteDTO> listaDTO = new List<ClienteDTO>();
             dtGVListadoClientes.AutoGenerateColumns = false;
             dtGVListadoClientes.RowTemplate.Height = 50;
             dtGVListadoClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dtGVListadoClientes.DataSource = _BllCliente.GetAllCliente();
+            String sexo = "";
+            foreach (Cliente item in lista)
+            {               
+               
+                if (item.Sexo == false)
+                {
+                    sexo = "Masculino";
+                }
+                else
+                {
+                    sexo = "Femenino";
+                }
+                ClienteDTO oCliente = new ClienteDTO();
+                oCliente.IdCliente = item.IdCliente.ToString("#-####-####");
+                oCliente.Nombre = item.Nombre;
+                oCliente.PrimerApellido = item.PrimerApellido;
+                oCliente.SegundoApellido = item.SegundoApellido;
+                oCliente.Correo = item.Correo;
+                oCliente.Telefono = item.Telefono;
+                oCliente.Direccion = item.Direccion;
+                oCliente.Sexo = sexo;
 
-            IBLLSexo _BLLSexo = new BLLSexo();
+                listaDTO.Add(oCliente);
+            }
+            dtGVListadoClientes.DataSource = listaDTO;
+           
             this.cBoxSexo.Items.Clear();
 
             foreach (Sexo item in _BLLSexo.GetAllSexo())
@@ -101,8 +163,6 @@ namespace UTN.Winform.Funeraria.UI
             }
 
             this.cBoxSexo.SelectedIndex = 0;
-
-
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -117,8 +177,6 @@ namespace UTN.Winform.Funeraria.UI
                 throw;
             }
         }
-
-
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -139,7 +197,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCorreo.Text = oCliente.Correo.ToString();
                     this.txtTelefono.Text = oCliente.Telefono.ToString();
 
-                    if (oCliente.Sexo == 0)
+                    if (oCliente.Sexo == true)
                     {
 
                         this.cBoxSexo.SelectedIndex = cBoxSexo.FindString("Masculino");
@@ -204,7 +262,6 @@ namespace UTN.Winform.Funeraria.UI
             }
         }
 
-
         private void CambiarEstado(MantenimientoEnum estado)
         {
             this.txtId.Text = "";
@@ -251,7 +308,6 @@ namespace UTN.Winform.Funeraria.UI
         private void frmMantCliente_Load_1(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'proyectoFunerariaVirgenAngelesDataSet.Cliente' table. You can move, or remove it, as needed.
-            this.clienteTableAdapter.Fill(this.proyectoFunerariaVirgenAngelesDataSet.Cliente);
             CargarDatos();
 
         }

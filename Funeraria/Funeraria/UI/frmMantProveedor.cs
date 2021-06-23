@@ -21,38 +21,86 @@ namespace UTN.Winform.Funeraria.UI
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
-
-      
-
-        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         #region Mantenimientos
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CambiarEstado(MantenimientoEnum.Nuevo);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CambiarEstado(MantenimientoEnum.Ninguno);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         private void frmMantProveedor_Load(object sender, EventArgs e)
         {
             llenarCombos();
             llenarDatos();
             CambiarEstado(MantenimientoEnum.Ninguno);
+            toolNombre.SetToolTip(txtNombre, "Por favor digite el nombre del activo a insertar");
         }
         public void llenarDatos()
         {
             IBLLProveedores _BLLProveedores = new BLLProveedores();
-            List<ProveedorDTO> lista = _BLLProveedores.GetAllProveedor();
+            IBLLTipoServicio _BLLTipoServicio = new BLLTipoServicio();
+            List<Proveedor> lista = _BLLProveedores.GetAllProveedor();
+            List<TipoServicio> listaTipo = _BLLTipoServicio.GetAllTipoServicio();
+            List<ProveedorDTO> listaProveedorDTO = new List<ProveedorDTO>();
             dgvDatos.AutoGenerateColumns = false;
             dgvDatos.RowTemplate.Height = 50;
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dgvDatos.DataSource = lista;
+            String desc = "";
+            foreach (Proveedor item in lista)
+            {
+                ProveedorDTO oActivoDto = new ProveedorDTO();
+                foreach (TipoServicio act in listaTipo)
+                {
+                    if (act.IdTipoServicio == item.IdTipoServicio)
+                    {
+                        desc = act.Descripcion;
+                    }
+                }
+                oActivoDto.IdProveedor = item.IdProveedor;
+                oActivoDto.NomProveedor = item.NomProveedor;
+                oActivoDto.Propietario = item.Propietario;
+                oActivoDto.TelCelular = item.TelCelular; ;
+                oActivoDto.TelProveedor = item.TelProveedor;
+                oActivoDto.TelFax = item.TelFax;
+                oActivoDto.Correo = item.Correo;
+                oActivoDto.Precio = item.Precio.ToString("₡" + "#,##0");
+                oActivoDto.CantUni = item.CantUni;
+                oActivoDto.Servicio = desc;
+
+                if (item.Estado == true)
+                {
+                    oActivoDto.Estado = "Activo";
+                }
+                else
+                {
+                    oActivoDto.Estado = "Inactivo";
+                }
+                listaProveedorDTO.Add(oActivoDto);
+            }
+            dgvDatos.DataSource = listaProveedorDTO;
+
         }
         public void llenarCombos()
         {
@@ -134,6 +182,38 @@ namespace UTN.Winform.Funeraria.UI
         {
             try
             {
+                errPro.Clear();
+                if (string.IsNullOrEmpty(this.txtNombre.Text))
+                {
+                    errPro.SetError(txtNombre, "Nombre requerido");
+                    this.txtNombre.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtPropietario.Text))
+                {
+                    errPro.SetError(txtPropietario, "Nombre Propietario requerido");
+                    this.txtPropietario.Focus();
+                    return;
+                }                
+                if (string.IsNullOrEmpty(this.txtCorreo.Text))
+                {
+                    errPro.SetError(txtCorreo, "Correo requerido");
+                    this.txtCorreo.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtPrecio.Text))
+                {
+                    errPro.SetError(txtPrecio, "Precio requerido");
+                    this.txtPrecio.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtCantidad.Text))
+                {
+                    errPro.SetError(txtCantidad, "Cantidad requerido");
+                    this.txtCantidad.Focus();
+                    return;
+                }
+
                 IBLLProveedores _BllProveedores = new BLLProveedores();
                 Proveedor oProveedores = new Proveedor();
                 oProveedores.IdProveedor = int.Parse(this.txtId.Text);
@@ -167,6 +247,7 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
+            llenarCombos();
             llenarDatos();
         }
         private void btnEditar_Click(object sender, EventArgs e)
@@ -238,6 +319,9 @@ namespace UTN.Winform.Funeraria.UI
 
             }
         }
+
         #endregion
+
+       
     }
 }

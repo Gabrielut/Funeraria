@@ -43,21 +43,15 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
         }
 
-        public List<ProveedorDTO> GetAllProveedor()
+        public List<Proveedor> GetAllProveedor()
         {
             DataSet ds = null;
-            List<ProveedorDTO> lista = new List<ProveedorDTO>();
+            List<Proveedor> lista = new List<Proveedor>();
             SqlCommand command = new SqlCommand();
 
             try
             {
-                string sql = @" SELECT Proveedores.IdProveedor, Proveedores.NomProveedor, 
-                                Proveedores.Propietario, Proveedores.TelCelular,
-                                Proveedores.TelProveedor, Proveedores.TelFax,Proveedores.Correo, 
-                                Proveedores.Precio, Proveedores.CantUni,TipoServicio.Descripcion AS
-                                Servicio, Proveedores.Estado FROM Proveedores INNER JOIN
-                                TipoServicio ON Proveedores.IdTipoServicio = 
-                                TipoServicio.IdTipoServicio";
+                string sql = @"Select * from Proveedores";
 
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
@@ -71,27 +65,21 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        ProveedorDTO oProveedorDTO = new ProveedorDTO();
-                        oProveedorDTO.IdProveedor = int.Parse(dr["IdProveedor"].ToString());
-                        oProveedorDTO.NomProveedor = dr["NomProveedor"].ToString();
-                        oProveedorDTO.Propietario = dr["Propietario"].ToString();
-                        oProveedorDTO.TelCelular = dr["TelCelular"].ToString();
-                        oProveedorDTO.TelProveedor = (dr["TelProveedor"].ToString());
-                        oProveedorDTO.TelFax = (dr["TelFax"].ToString());
-                        oProveedorDTO.Correo = (dr["Correo"].ToString());
-                        oProveedorDTO.Precio = int.Parse(dr["Precio"].ToString());
-                        oProveedorDTO.CantUni = int.Parse(dr["CantUni"].ToString());
-                        oProveedorDTO.Servicio = dr["Servicio"].ToString();
-                        if ((bool)(dr["Estado"]))
-                        {
-                            oProveedorDTO.Estado = "Activo";
-                        }
-                        else
-                        {
-                            oProveedorDTO.Estado = "Inactivo";
-                        }
+                        Proveedor oProveedor = new Proveedor();
+                        oProveedor.IdProveedor = int.Parse(dr["IdProveedor"].ToString());
+                        oProveedor.NomProveedor = dr["NomProveedor"].ToString();
+                        oProveedor.Propietario = dr["Propietario"].ToString();
+                        oProveedor.TelCelular = dr["TelCelular"].ToString();
+                        oProveedor.TelProveedor = (dr["TelProveedor"].ToString());
+                        oProveedor.TelFax = (dr["TelFax"].ToString());
+                        oProveedor.Correo = (dr["Correo"].ToString());
+                        oProveedor.Precio = int.Parse(dr["Precio"].ToString());
+                        oProveedor.CantUni = int.Parse(dr["CantUni"].ToString());
+                        oProveedor.IdTipoServicio = int.Parse(dr["IdTipoServicio"].ToString());
+                        oProveedor.Estado = (bool)(dr["Estado"]);
+                       
 
-                        lista.Add(oProveedorDTO);
+                        lista.Add(oProveedor);
                     }
                 }
             }

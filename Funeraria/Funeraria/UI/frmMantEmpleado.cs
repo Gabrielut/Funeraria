@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.BLL;
 using UTN.Winform.Funeraria.Layers.Entities;
+using UTN.Winform.Funeraria.Layers.Entities.DTO;
 
 namespace UTN.Winform.Funeraria.UI
 {
@@ -22,10 +23,7 @@ namespace UTN.Winform.Funeraria.UI
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
-        {
-
-        }
+        #region Mantenimientos
         private void iconButton2_Click(object sender, EventArgs e)
         {
             CambiarEstado(MantenimientoEnum.Ninguno);
@@ -37,15 +35,57 @@ namespace UTN.Winform.Funeraria.UI
             CambiarEstado(MantenimientoEnum.Ninguno);
 
         }
-
-        #region Mantenimientos
         public void llenarDatos()
         {
             IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
+            IBLLRol _BLLRol = new BLLRol();
+            List<Usuarios> lista = _BLLUsuarios.GetAllUsuarios();
+            List<Rol> listaTipo = _BLLRol.GetAllRol();
+            List<UsuariosDTO> listaUsuariosDTO = new List<UsuariosDTO>();
             dgvDatos.AutoGenerateColumns = false;
             dgvDatos.RowTemplate.Height = 50;
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dgvDatos.DataSource = _BLLUsuarios.GetAllUsuarios();
+            String desc = "";
+            foreach (Usuarios item in lista)
+            {
+                UsuariosDTO oUsuariosDTO = new UsuariosDTO();
+                foreach (Rol act in listaTipo)
+                {
+                    if (act.IDRol == item.IdRol)
+                    {
+                        desc = act.Descripcion;
+                    }
+                }
+                oUsuariosDTO.IDUsuario = item.IDUsuario;
+                oUsuariosDTO.Nombre = item.Nombre;
+                oUsuariosDTO.PrimerApellido = item.PrimerApellido;
+                oUsuariosDTO.SegundoApellido = item.SegundoApellido;
+                oUsuariosDTO.Telefono = item.Telefono;
+                oUsuariosDTO.IdRol = desc;
+                oUsuariosDTO.Correo = item.Correo;
+                //item.Precio.ToString("₡" + "#,##0");
+                oUsuariosDTO.FechaNacimiento = item.FechaNacimiento.ToShortDateString();
+                oUsuariosDTO.Direccion = item.Direccion;
+                if (item.Estado == true)
+                {
+                    oUsuariosDTO.Estado = "Activo";
+                }
+                else
+                {
+                    oUsuariosDTO.Estado = "Inactivo";
+                }
+                if (item.Sexo == 1)
+                {
+                    oUsuariosDTO.Sexo = "Masculino";
+                }
+                else
+                {
+                    oUsuariosDTO.Sexo = "Femenino";
+                }
+
+                listaUsuariosDTO.Add(oUsuariosDTO);
+            }
+            dgvDatos.DataSource = listaUsuariosDTO;
         }
         public void llenarCombos()
         {
@@ -125,6 +165,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtDireccion.Enabled = true;
                     this.rdbHabilitar.Enabled = true;
                     this.rdbDesabilitar.Enabled = true;
+                    this.cboSexo.Enabled = true;
                     this.txtNombre.Focus();
                     break;
                 case MantenimientoEnum.Borrar:
@@ -137,16 +178,60 @@ namespace UTN.Winform.Funeraria.UI
         {
             try
             {
+                errPro.Clear();
+                if (string.IsNullOrEmpty(this.txtCedula.Text))
+                {
+                    errPro.SetError(txtCedula, "Identificacion requerido");
+                    this.txtCedula.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtApellido1.Text))
+                {
+                    errPro.SetError(txtApellido1, "Apellido requerido");
+                    this.txtApellido1.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtApellido2.Text))
+                {
+                    errPro.SetError(txtApellido2, "Apellido requerido");
+                    this.txtApellido2.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtTelefono.Text))
+                {
+                    errPro.SetError(txtTelefono, "Telefono requerido");
+                    this.txtTelefono.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtDireccion.Text))
+                {
+                    errPro.SetError(txtDireccion, "Direccion requerido");
+                    this.txtDireccion.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtCorreo.Text))
+                {
+                    errPro.SetError(txtCorreo, "Correo requerido");
+                    this.txtCorreo.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtContrasenna.Text))
+                {
+                    errPro.SetError(txtContrasenna, "Contraseña requerido");
+                    this.txtContrasenna.Focus();
+                    return;
+                }
                 IBLLUsuarios _BllUsuario = new BLLUsuarios();
                 Usuarios oUsuarios = new Usuarios();
-                if (Regex.Match(this.txtContrasenna.Text, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,15})$").Success)
-                {
-                    MessageBox.Show("Siiiuuuu");
-                }
-                else
-                {
-                    throw new Exception();
-                }
+                //if (Regex.Match(this.txtContrasenna.Text, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,15})$").Success)
+                //{
+                //    MessageBox.Show("Siiiuuuu");
+                //}
+                //else
+                //{
+                //    throw new Exception();
+                //}
+
                 oUsuarios.IDUsuario = this.txtCedula.Text;
                 oUsuarios.Nombre = this.txtNombre.Text;
                 oUsuarios.PrimerApellido = this.txtApellido1.Text;
@@ -157,7 +242,15 @@ namespace UTN.Winform.Funeraria.UI
                 oUsuarios.Sexo = (cboSexo.SelectedItem as Sexo).IdSexo;
                 oUsuarios.IdRol = (cboRol.SelectedItem as Rol).IDRol;
                 oUsuarios.FechaNacimiento = dtpFechaNac.Value;
-                oUsuarios.Estado = true;
+                if (rdbHabilitar.Checked)
+                {
+                    oUsuarios.Estado = true;
+                }
+                else
+                {
+                    oUsuarios.Estado = false;
+                }
+              
                 oUsuarios.Direccion = txtDireccion.Text;
                 oUsuarios.Token = "";
                 if (_BllUsuario.SaveUsuarios(oUsuarios) != null)
@@ -171,6 +264,8 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
+            llenarCombos();
+            llenarDatos();
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -181,6 +276,7 @@ namespace UTN.Winform.Funeraria.UI
 
                 if (this.dgvDatos.SelectedRows.Count > 0)
                 {
+                    CambiarEstado(MantenimientoEnum.Editar);
                     oUsuarios = dgvDatos.SelectedRows[0].DataBoundItem as Usuarios;
                     this.txtCedula.Text = oUsuarios.IDUsuario;
                     this.txtNombre.Text = oUsuarios.Nombre;

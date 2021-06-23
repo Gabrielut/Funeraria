@@ -10,7 +10,7 @@ namespace UTN.Winform.Funeraria.Interfaces
 {
     interface IBLLActivo
     {
-        List<ActivoDTO> GetAllActivos();
+        List<Activo> GetAllActivos();
         Activo GetActivoById(int pActivo);
         Activo SaveActivo(Activo pActivo);
         List<Activo> GetActivoByFilter(string pDescripcion);

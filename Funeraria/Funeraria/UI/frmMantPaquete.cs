@@ -21,10 +21,6 @@ namespace UTN.Winform.Funeraria.UI
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
-        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         #region Mantenimeintos
         private void frmMantPaquete_Load(object sender, EventArgs e)
         {
@@ -39,11 +35,41 @@ namespace UTN.Winform.Funeraria.UI
         public void llenarDatos()
         {
             IBLLPaquete _BLLPaquete = new BLLPaquete();
-            List<PaqueteDTO> lista = _BLLPaquete.GetAllPaquete();
+            IBLLTipoPaquete _BLLTipoPaquete = new BLLTipoPaquete();
+            List<Paquete> lista = _BLLPaquete.GetAllPaquete();
+            List<TipoPaquete> listaTipo = _BLLTipoPaquete.GetAllTipoPaquete();
+            List<PaqueteDTO> listaActivosDTO = new List<PaqueteDTO>();
             dgvDatos.AutoGenerateColumns = false;
             dgvDatos.RowTemplate.Height = 50;
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dgvDatos.DataSource = lista;
+            String desc = "";
+            foreach (Paquete item in lista)
+            {
+                PaqueteDTO oActivoDto = new PaqueteDTO();
+                foreach (TipoPaquete act in listaTipo)
+                {
+                    if (act.IdTipoPaquete == item.IdTipoPaquete)
+                    {
+                        desc = act.Descripcion;
+                    }
+                }
+                oActivoDto.IdPaquete = item.IdPaquete;
+                oActivoDto.Nombre = item.Nombre;
+                oActivoDto.Descripcion = item.Descripcion;
+                oActivoDto.Precio = item.Precio.ToString("₡" + "#,##0");
+                oActivoDto.Cantidad = item.Cantidad;
+                oActivoDto.Paquete = desc;              
+                if (item.Estado == true)
+                {
+                    oActivoDto.Estado = "Activo";
+                }
+                else
+                {
+                    oActivoDto.Estado = "Inactivo";
+                }
+                listaActivosDTO.Add(oActivoDto);
+            }
+            dgvDatos.DataSource = listaActivosDTO;
         }
         public void llenarCombos()
         {
@@ -111,6 +137,25 @@ namespace UTN.Winform.Funeraria.UI
         {
             try
             {
+                errPro.Clear();
+                if (string.IsNullOrEmpty(this.txtNombre.Text))
+                {
+                    errPro.SetError(txtNombre, "Nombre requerido");
+                    this.txtNombre.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtDescripcion.Text))
+                {
+                    errPro.SetError(txtDescripcion, "Descripcion requerido");
+                    this.txtDescripcion.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(this.txtPrecio.Text))
+                {
+                    errPro.SetError(txtPrecio, "Precio requerido");
+                    this.txtPrecio.Focus();
+                    return;
+                }               
                 IBLLPaquete _BllPaquete = new BLLPaquete();
                 Paquete oPaquete = new Paquete();
                 oPaquete.IdPaquete = int.Parse(this.txtId.Text);
@@ -139,6 +184,8 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
+            llenarCombos();
+            llenarDatos();
         }       
         private void btnEditar_Click(object sender, EventArgs e)
         {

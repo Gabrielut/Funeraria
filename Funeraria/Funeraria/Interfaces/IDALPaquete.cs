@@ -10,7 +10,7 @@ namespace UTN.Winform.Funeraria.Interfaces
 {
     interface IDALPaquete
     {
-        List<PaqueteDTO> GetAllPaquete();
+        List<Paquete> GetAllPaquete();
         Paquete GetPaqueteById(int pPaquete);
         Paquete SavePaquete(Paquete pPaquete);
         List<Paquete> GetPaqueteByFilter(string pDescripcion);
