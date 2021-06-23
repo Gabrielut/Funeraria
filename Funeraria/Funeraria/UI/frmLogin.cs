@@ -42,36 +42,45 @@ namespace UTN.Winform.Funeraria.UI
             {
                 IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
                 Usuarios oUsuarios = _BLLUsuarios.LoginUsuarios(this.txtUsuario.Text);
+                errPro.Clear();
 
                 if (string.IsNullOrEmpty(this.txtUsuario.Text))
                 {
-                    // errorUsuario.SetError(txtUsuario, "Usuario requerido");
+                    errPro.SetError(txtUsuario, "Usuario requerido");
                     this.txtUsuario.Focus();
                     return;
                 }
                 if (string.IsNullOrEmpty(this.txtContrasena.Text))
                 {
-                    // errorContrasena.SetError(txtContrasena, "Contraseñá requerida");
+                    errPro.SetError(txtContrasena, "Contraseñá requerida");
                     this.txtContrasena.Focus();
                     return;
                 }
 
-                if (oUsuarios.Correo.Equals(this.txtUsuario.Text, StringComparison.CurrentCultureIgnoreCase) && oUsuarios.Contrasenna.Equals(this.txtContrasena.Text, StringComparison.CurrentCultureIgnoreCase))
-                {
-
-                    this.DialogResult = DialogResult.OK;
-
-                }
-                else
+                if (oUsuarios.Correo == null && oUsuarios.Contrasenna == null || oUsuarios.Correo.Equals("") && oUsuarios.Contrasenna.Equals(""))
                 {
                     MessageBox.Show("El usuario no existe o los datos ingresados son incorrectos");
                     txtUsuario.Focus();
                 }
+                else
+                {
+                    if (oUsuarios.Correo.Equals(this.txtUsuario.Text, StringComparison.CurrentCultureIgnoreCase) && oUsuarios.Contrasenna.Equals(this.txtContrasena.Text, StringComparison.CurrentCultureIgnoreCase))
+                    {
+
+                        this.DialogResult = DialogResult.OK;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario no existe o los datos ingresados son incorrectos");
+                        txtUsuario.Focus();
+                    }
+                }            
 
             }
             catch (Exception er)
             {
-
+               
                 throw er;
 
             }

@@ -93,19 +93,15 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 throw;
             }
         }
-        public List<ActivoDTO> GetAllActivos()
+        public List<Activo> GetAllActivos()
         {
             DataSet ds = null;
-            List<ActivoDTO> lista = new List<ActivoDTO>();
+            List<Activo> lista = new List<Activo>();
             SqlCommand command = new SqlCommand();
 
             try
             {
-                string sql = @" SELECT Activo.IdActivo AS Id, Activo.Nombre, Activo.Descripcion, 
-                                Activo.Cantidad, Activo.Costo, Activo.Precio, Activo.InformacionAdicional,
-                                Activo.Img AS Imagen, Activo.Estado, TipoActivo.Descripcion AS 
-                                TipoActivo  FROM Activo INNER JOIN TipoActivo ON 
-                                Activo.TipoActivo = TipoActivo.IdTipoActivo";
+                string sql = @"select * from Activo";
 
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
@@ -119,26 +115,18 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        ActivoDTO oActivoDTO = new ActivoDTO();
-                        oActivoDTO.IdActivo = int.Parse(dr["Id"].ToString());
-                        oActivoDTO.Nombre = dr["Nombre"].ToString();
-                        oActivoDTO.Descripcion = dr["Descripcion"].ToString();
-                        oActivoDTO.TipoActivo = dr["TipoActivo"].ToString();
-                        oActivoDTO.Cantidad = int.Parse(dr["Cantidad"].ToString());
-                        oActivoDTO.Costo = float.Parse(dr["Costo"].ToString());
-                        oActivoDTO.Precio = float.Parse(dr["Precio"].ToString());
-                        oActivoDTO.InformacionAdicional = dr["InformacionAdicional"].ToString();
-                        if ((bool)(dr["Estado"]))
-                        {
-                            oActivoDTO.Estado = "Activo";
-                        }
-                        else
-                        {
-                            oActivoDTO.Estado = "Inactivo";
-                        }
-                        
-                        oActivoDTO.Img = (byte[])dr["Imagen"];
-                        lista.Add(oActivoDTO);
+                        Activo oActivo = new Activo();
+                        oActivo.IdActivo = int.Parse(dr["IdActivo"].ToString());
+                        oActivo.Nombre = dr["Nombre"].ToString();
+                        oActivo.Descripcion = dr["Descripcion"].ToString();
+                        oActivo.TipoActivo = int.Parse(dr["TipoActivo"].ToString());
+                        oActivo.Cantidad = int.Parse(dr["Cantidad"].ToString());
+                        oActivo.Costo = float.Parse(dr["Costo"].ToString());
+                        oActivo.Precio = float.Parse(dr["Precio"].ToString());
+                        oActivo.InformacionAdicional = dr["InformacionAdicional"].ToString();
+                        oActivo.Estado = bool.Parse(dr["Estado"].ToString());
+                        oActivo.Img = (byte[])dr["Img"];
+                        lista.Add(oActivo);
                     }
                 }
             }

@@ -11,7 +11,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities.DTO
         public int IdPaquete { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public float Precio { get; set; }
+        public string Precio { get; set; }
         public int Cantidad { get; set; }
         public string Paquete { get; set; }
         public string Estado { get; set; }

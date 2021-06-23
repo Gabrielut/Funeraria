@@ -43,18 +43,15 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
         }
 
-        public List<PaqueteDTO> GetAllPaquete()
+        public List<Paquete> GetAllPaquete()
         {
             DataSet ds = null;
-            List<PaqueteDTO> lista = new List<PaqueteDTO>();
+            List<Paquete> lista = new List<Paquete>();
             SqlCommand command = new SqlCommand();
 
             try
             {
-                string sql = @" SELECT Paquete.IdPaquete, Paquete.Nombre, Paquete.Descripcion, 
-                                Paquete.Precio, Paquete.Cantidad, TipoPaquete.Descripcion AS Paquete, 
-                                Paquete.Estado FROM Paquete INNER JOIN
-                                TipoPaquete ON Paquete.IdTipoPaquete = TipoPaquete.IdTipoPaquete";
+                string sql = @"select * from Paquete";
 
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
@@ -68,22 +65,15 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        PaqueteDTO oPaqueteDTO = new PaqueteDTO();
-                        oPaqueteDTO.IdPaquete = int.Parse(dr["IdPaquete"].ToString());
-                        oPaqueteDTO.Nombre = dr["Nombre"].ToString();
-                        oPaqueteDTO.Descripcion = dr["Descripcion"].ToString();
-                        oPaqueteDTO.Precio = (float.Parse(dr["Precio"].ToString()));
-                        oPaqueteDTO.Cantidad = (int.Parse(dr["Cantidad"].ToString()));
-                        oPaqueteDTO.Paquete = (dr["Paquete"].ToString());
-                        if ((bool)dr["Estado"])
-                        {
-                            oPaqueteDTO.Estado = "Activo";
-                        }
-                        else
-                        {
-                            oPaqueteDTO.Estado = "Inactivo";
-                        }
-                        lista.Add(oPaqueteDTO);
+                        Paquete oPaquete = new Paquete();
+                        oPaquete.IdPaquete = int.Parse(dr["IdPaquete"].ToString());
+                        oPaquete.Nombre = dr["Nombre"].ToString();
+                        oPaquete.Descripcion = dr["Descripcion"].ToString();
+                        oPaquete.Precio = (float.Parse(dr["Precio"].ToString()));
+                        oPaquete.Cantidad = (int.Parse(dr["Cantidad"].ToString()));
+                        oPaquete.IdTipoPaquete = (int.Parse(dr["IdTipoPaquete"].ToString()));
+                        oPaquete.Estado = (bool)dr["Estado"];
+                        lista.Add(oPaquete);
                     }
                 }
             }
@@ -202,7 +192,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             cmd.Parameters.AddWithValue("@Cantidad", pPaquete.Cantidad);
             cmd.Parameters.AddWithValue("@IdTipoPaquete", pPaquete.IdTipoPaquete);
             cmd.Parameters.AddWithValue("@Estado", pPaquete.Estado);
-            
+
             cmd.CommandText = sql;
 
             using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
@@ -237,7 +227,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 command.Parameters.AddWithValue("@Precio", pPaquete.Precio);
                 command.Parameters.AddWithValue("@Cantidad", pPaquete.Cantidad);
                 command.Parameters.AddWithValue("@IdTipoPaquete", pPaquete.IdTipoPaquete);
-                command.Parameters.AddWithValue("@Estado", pPaquete.Estado);               
+                command.Parameters.AddWithValue("@Estado", pPaquete.Estado);
                 command.Parameters.AddWithValue("@IdPaquete", pPaquete.IdPaquete);
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;

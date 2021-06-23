@@ -40,8 +40,6 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado = new System.Windows.Forms.Label();
             this.pnlLinea = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCosto = new System.Windows.Forms.NumericUpDown();
-            this.txtPrecio = new System.Windows.Forms.NumericUpDown();
             this.txtIdActivo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
@@ -90,14 +88,16 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTListado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTEstado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTCantidad = new System.Windows.Forms.ToolTip(this.components);
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCosto = new System.Windows.Forms.MaskedTextBox();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.pnlMenu.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -239,8 +239,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txtCosto);
             this.groupBox1.Controls.Add(this.txtPrecio);
+            this.groupBox1.Controls.Add(this.txtCosto);
             this.groupBox1.Controls.Add(this.txtIdActivo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pbImage);
@@ -266,22 +266,6 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
-            // 
-            // txtCosto
-            // 
-            this.txtCosto.DecimalPlaces = 2;
-            this.txtCosto.Location = new System.Drawing.Point(673, 33);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(100, 24);
-            this.txtCosto.TabIndex = 29;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.DecimalPlaces = 2;
-            this.txtPrecio.Location = new System.Drawing.Point(673, 82);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 24);
-            this.txtPrecio.TabIndex = 28;
             // 
             // txtIdActivo
             // 
@@ -354,6 +338,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtDetalles.Name = "txtDetalles";
             this.txtDetalles.Size = new System.Drawing.Size(132, 34);
             this.txtDetalles.TabIndex = 20;
+            this.txtDetalles.Tag = "Ingrese los detalles Adicionales referente al activo";
             // 
             // lblDetalles
             // 
@@ -526,7 +511,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Estado});
             this.dGVListadoActivos.Location = new System.Drawing.Point(63, 272);
             this.dGVListadoActivos.Name = "dGVListadoActivos";
-            this.dGVListadoActivos.Size = new System.Drawing.Size(787, 334);
+            this.dGVListadoActivos.Size = new System.Drawing.Size(787, 305);
             this.dGVListadoActivos.TabIndex = 4;
             // 
             // Id
@@ -656,6 +641,25 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.toolTCantidad.IsBalloon = true;
             // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
+            // 
+            // txtCosto
+            // 
+            this.txtCosto.Location = new System.Drawing.Point(673, 38);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(100, 24);
+            this.txtCosto.TabIndex = 28;
+            this.txtCosto.ValidatingType = typeof(int);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(673, 82);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 24);
+            this.txtPrecio.TabIndex = 29;
+            // 
             // frmMantActivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,11 +677,10 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenido.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -742,7 +745,8 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.TextBox txtIdActivo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown txtCosto;
-        private System.Windows.Forms.NumericUpDown txtPrecio;
+        private System.Windows.Forms.ErrorProvider errPro;
+        private System.Windows.Forms.MaskedTextBox txtPrecio;
+        private System.Windows.Forms.MaskedTextBox txtCosto;
     }
 }

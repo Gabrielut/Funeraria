@@ -29,6 +29,7 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
@@ -36,12 +37,12 @@ namespace UTN.Winform.Funeraria.UI
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtFax = new System.Windows.Forms.MaskedTextBox();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
@@ -75,11 +76,14 @@ namespace UTN.Winform.Funeraria.UI
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -153,6 +157,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnNuevo.Size = new System.Drawing.Size(50, 45);
             this.btnNuevo.TabIndex = 1;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnDelete
             // 
@@ -173,12 +178,12 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.txtFax);
             this.groupBox1.Controls.Add(this.txtCelular);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtCantidad);
-            this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.cboEstado);
@@ -202,12 +207,19 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(593, 41);
+            this.txtPrecio.Mask = "000000000";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(136, 24);
+            this.txtPrecio.TabIndex = 27;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(336, 91);
-            this.txtTelefono.Mask = "000-0000";
+            this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(139, 24);
             this.txtTelefono.TabIndex = 25;
@@ -215,7 +227,7 @@ namespace UTN.Winform.Funeraria.UI
             // txtFax
             // 
             this.txtFax.Location = new System.Drawing.Point(336, 126);
-            this.txtFax.Mask = "000-0000";
+            this.txtFax.Mask = "0000-0000";
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(139, 24);
             this.txtFax.TabIndex = 24;
@@ -223,7 +235,7 @@ namespace UTN.Winform.Funeraria.UI
             // txtCelular
             // 
             this.txtCelular.Location = new System.Drawing.Point(336, 41);
-            this.txtCelular.Mask = "000-0000";
+            this.txtCelular.Mask = "0000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(139, 24);
             this.txtCelular.TabIndex = 23;
@@ -253,13 +265,6 @@ namespace UTN.Winform.Funeraria.UI
             0,
             0,
             0});
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(593, 45);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(139, 24);
-            this.txtPrecio.TabIndex = 20;
             // 
             // label8
             // 
@@ -395,6 +400,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(134, 24);
             this.txtNombre.TabIndex = 0;
+            this.txtNombre.Tag = "Digite el nombre del proveedor";
             // 
             // lblListado
             // 
@@ -554,6 +560,7 @@ namespace UTN.Winform.Funeraria.UI
             this.iconButton2.Text = "Cancelar";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // pnlContenedor
             // 
@@ -568,7 +575,14 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1052, 681);
             this.pnlContenedor.TabIndex = 28;
-            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
+            // 
+            // toolNombre
+            // 
+            this.toolNombre.IsBalloon = true;
+            // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
             // 
             // frmMantProveedor
             // 
@@ -589,6 +603,7 @@ namespace UTN.Winform.Funeraria.UI
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -625,7 +640,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown txtCantidad;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox txtTelefono;
         private System.Windows.Forms.MaskedTextBox txtFax;
@@ -641,5 +655,8 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn CantUni;
         private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.MaskedTextBox txtPrecio;
+        private System.Windows.Forms.ToolTip toolNombre;
+        private System.Windows.Forms.ErrorProvider errPro;
     }
 }
