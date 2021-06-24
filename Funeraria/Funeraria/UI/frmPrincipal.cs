@@ -381,11 +381,5 @@ namespace UTN.Winform.Funeraria.UI
             esconderSubMenu();
             abrirForumalario<frmMantProveedor>();
         }
-
-        private void btnConvenios_Click(object sender, EventArgs e)
-        {
-            esconderSubMenu();
-            abrirForumalario<frmMantConvenios>();
-        }
     }
 }

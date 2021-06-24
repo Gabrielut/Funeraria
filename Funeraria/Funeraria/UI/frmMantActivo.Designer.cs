@@ -32,14 +32,17 @@ namespace UTN.Winform.Funeraria.UI
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.lblListado = new System.Windows.Forms.Label();
+            this.pnlLinea = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-
             this.txtIdActivo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
-
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.cbBoxEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -55,6 +58,8 @@ namespace UTN.Winform.Funeraria.UI
             this.lblPrecio = new System.Windows.Forms.Label();
             this.cbBoxTipoActivo = new System.Windows.Forms.ComboBox();
             this.lblCosto = new System.Windows.Forms.Label();
+            this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.dGVListadoActivos = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,21 +88,16 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTListado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTEstado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTCantidad = new System.Windows.Forms.ToolTip(this.components);
-
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCosto = new System.Windows.Forms.MaskedTextBox();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
-
             this.pnlMenu.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).BeginInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
-
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -127,6 +127,80 @@ namespace UTN.Winform.Funeraria.UI
             this.lblTitulo.TabIndex = 22;
             this.lblTitulo.Text = "Ventana de Activos";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEditar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditar.IconSize = 37;
+            this.btnEditar.Location = new System.Drawing.Point(62, -1);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(60, 45);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
+            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 36;
+            this.btnSalir.Location = new System.Drawing.Point(1022, 6);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(37, 31);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.btnNuevo.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.IconSize = 36;
+            this.btnNuevo.Location = new System.Drawing.Point(4, -1);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(62, 45);
+            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Cut;
+            this.btnEliminar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 35;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.Location = new System.Drawing.Point(128, 3);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(56, 41);
+            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // pnlContenido
             // 
             this.pnlContenido.BackColor = System.Drawing.Color.White;
@@ -152,6 +226,14 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado.Size = new System.Drawing.Size(220, 19);
             this.lblListado.TabIndex = 22;
             this.lblListado.Text = "Listado actualizado de Activos";
+            // 
+            // pnlLinea
+            // 
+            this.pnlLinea.BackColor = System.Drawing.Color.Black;
+            this.pnlLinea.Location = new System.Drawing.Point(63, 250);
+            this.pnlLinea.Name = "pnlLinea";
+            this.pnlLinea.Size = new System.Drawing.Size(223, 1);
+            this.pnlLinea.TabIndex = 23;
             // 
             // groupBox1
             // 
@@ -185,7 +267,6 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
             // 
-
             // txtIdActivo
             // 
             this.txtIdActivo.Enabled = false;
@@ -204,38 +285,16 @@ namespace UTN.Winform.Funeraria.UI
             this.label1.Text = "Id";
             // 
             // pbImage
-
             // 
-            this.txtCosto.DecimalPlaces = 2;
-            this.txtCosto.Location = new System.Drawing.Point(673, 33);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(100, 24);
-            this.txtCosto.TabIndex = 29;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.DecimalPlaces = 2;
-            this.txtPrecio.Location = new System.Drawing.Point(673, 82);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 24);
-            this.txtPrecio.TabIndex = 28;
-            // 
-            // txtIdActivo
-            // 
-            this.txtIdActivo.Enabled = false;
-            this.txtIdActivo.Location = new System.Drawing.Point(146, 16);
-            this.txtIdActivo.Name = "txtIdActivo";
-            this.txtIdActivo.Size = new System.Drawing.Size(132, 24);
-            this.txtIdActivo.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Id";
+            this.pbImage.Image = global::UTN.Winform.Funeraria.Properties.Resources.download;
+            this.pbImage.Location = new System.Drawing.Point(673, 111);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(100, 46);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 25;
+            this.pbImage.TabStop = false;
+            this.pbImage.Tag = "";
+            this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
             // 
             // txtCantidad
             // 
@@ -384,6 +443,54 @@ namespace UTN.Winform.Funeraria.UI
             this.lblCosto.Size = new System.Drawing.Size(97, 16);
             this.lblCosto.TabIndex = 14;
             this.lblCosto.Text = "Costo Unitario";
+            // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGuardar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar2.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar2.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar2.Location = new System.Drawing.Point(856, 78);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGuardar2.Size = new System.Drawing.Size(117, 46);
+            this.btnGuardar2.TabIndex = 20;
+            this.btnGuardar2.Text = "Guardar";
+            this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar2.UseVisualStyleBackColor = false;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(856, 157);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 46);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dGVListadoActivos
             // 
@@ -534,7 +641,6 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.toolTCantidad.IsBalloon = true;
             // 
-
             // errPro
             // 
             this.errPro.ContainerControl = this;
@@ -546,16 +652,13 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCosto.Size = new System.Drawing.Size(100, 24);
             this.txtCosto.TabIndex = 28;
             this.txtCosto.ValidatingType = typeof(int);
-
             // 
-            // btnCancelar
+            // txtPrecio
             // 
-
             this.txtPrecio.Location = new System.Drawing.Point(673, 82);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 24);
             this.txtPrecio.TabIndex = 29;
-
             // 
             // frmMantActivo
             // 
@@ -574,15 +677,10 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenido.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).EndInit();
-
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
-
             this.ResumeLayout(false);
 
         }
@@ -622,6 +720,7 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.ComboBox cbBoxEstado;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblListado;
+        private System.Windows.Forms.Panel pnlLinea;
         private System.Windows.Forms.ToolTip toolTCerrar;
         private System.Windows.Forms.ToolTip toolTGuardar2;
         private System.Windows.Forms.ToolTip toolTCancelar;
@@ -646,10 +745,8 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.TextBox txtIdActivo;
         private System.Windows.Forms.Label label1;
-
         private System.Windows.Forms.ErrorProvider errPro;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.MaskedTextBox txtCosto;
-
     }
 }

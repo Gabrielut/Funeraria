@@ -68,14 +68,12 @@ namespace UTN.Winform.Funeraria.UI
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
@@ -488,10 +486,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // errPro
             // 
-
             this.errPro.ContainerControl = this;
             // 
-
             // frmMantCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,9 +505,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);
@@ -550,9 +544,7 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblID;
-
         private System.Windows.Forms.BindingSource clienteBindingSource;
-
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido1;

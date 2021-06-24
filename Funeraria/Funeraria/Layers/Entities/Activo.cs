@@ -19,9 +19,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string InformacionAdicional { get; set; }
         public byte[] Img { get; set; }
 
-
         public override string ToString() => $"{Nombre} ";
-
 
     }
 }

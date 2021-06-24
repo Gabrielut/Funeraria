@@ -24,14 +24,6 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string Direccion { get; set; }
         public string Token { get; set; }
 
-        public Rol Rol
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public override string ToString() => $"{Nombre} {PrimerApellido} {SegundoApellido}";
         
     }

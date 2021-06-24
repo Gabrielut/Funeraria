@@ -167,23 +167,11 @@
     <Compile Include="UI\frmCotizacion.Designer.cs">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Procesos\frmFacturacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Procesos\frmFacturacion.Designer.cs">
-      <DependentUpon>frmFacturacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\frmMantCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmMantCliente.Designer.cs">
       <DependentUpon>frmMantCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\frmMantConvenios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\frmMantConvenios.Designer.cs">
-      <DependentUpon>frmMantConvenios.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmMantEmpleado.cs">
       <SubType>Form</SubType>
@@ -249,9 +237,6 @@
     <EmbeddedResource Include="UI\frmMantCliente.resx">
       <DependentUpon>frmMantCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmMantConvenios.resx">
-      <DependentUpon>frmMantConvenios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMantEmpleado.resx">
       <DependentUpon>frmMantEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,12 +249,6 @@
     <EmbeddedResource Include="UI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Procesos\frmFacturacion.resx">
-      <DependentUpon>frmFacturacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="diagramaAdministracion.cd" />
-    <None Include="diagramaClases.cd" />
-    <None Include="diagramaSeguridad.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -284,9 +263,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Media\ReinaAngeles.jpeg" />
     <None Include="Resources\download.png" />

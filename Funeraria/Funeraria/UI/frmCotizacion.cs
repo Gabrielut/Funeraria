@@ -17,14 +17,6 @@ namespace UTN.Winform.Funeraria.UI
             InitializeComponent();
         }
 
-        private void pnlContenido_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }
