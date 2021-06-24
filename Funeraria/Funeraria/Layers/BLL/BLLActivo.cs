@@ -51,7 +51,7 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return oActivo;
         }
 
-        List<Activo> IBLLActivo.GetAllActivos()
+        List<ActivoDTO> IBLLActivo.GetAllActivos()
         {
             IDALActivo _DalActivo = new DALActivo();
             return _DalActivo.GetAllActivos();

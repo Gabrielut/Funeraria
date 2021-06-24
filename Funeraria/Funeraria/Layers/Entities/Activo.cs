@@ -19,7 +19,17 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string InformacionAdicional { get; set; }
         public byte[] Img { get; set; }
 
+<<<<<<< HEAD
         public override string ToString() => $"{Nombre} ";
 
+=======
+        internal TipoActivo TipoActivo1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
     }
 }
