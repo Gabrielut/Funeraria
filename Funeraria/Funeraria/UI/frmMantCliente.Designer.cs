@@ -69,6 +69,10 @@ namespace UTN.Winform.Funeraria.UI
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+           
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
            
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
@@ -78,7 +82,11 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.SuspendLayout();
             this.groupBox1.SuspendLayout();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();      
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();      
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
@@ -495,11 +503,16 @@ namespace UTN.Winform.Funeraria.UI
             // proyectoFunerariaVirgenAngelesDataSet
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.errPro.ContainerControl = this;
             // 
 =======
             
             // 
+=======
+            
+            // 
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "Cliente";
@@ -508,6 +521,9 @@ namespace UTN.Winform.Funeraria.UI
             // clienteTableAdapter
             // 
           
+<<<<<<< HEAD
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
+=======
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             // frmMantCliente
             // 
@@ -527,7 +543,11 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();       
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();       
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
@@ -569,7 +589,13 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblID;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.BindingSource clienteBindingSource;
+=======
+       
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+       
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
        
         private System.Windows.Forms.BindingSource clienteBindingSource;

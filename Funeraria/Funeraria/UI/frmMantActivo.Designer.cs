@@ -41,9 +41,16 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlLinea = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtIdActivo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
+=======
+            this.txtCosto = new System.Windows.Forms.NumericUpDown();
+            this.txtPrecio = new System.Windows.Forms.NumericUpDown();
+            this.txtIdActivo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
             this.txtCosto = new System.Windows.Forms.NumericUpDown();
             this.txtPrecio = new System.Windows.Forms.NumericUpDown();
@@ -96,10 +103,13 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTEstado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTCantidad = new System.Windows.Forms.ToolTip(this.components);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCosto = new System.Windows.Forms.MaskedTextBox();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
 =======
+=======
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
@@ -108,6 +118,9 @@ namespace UTN.Winform.Funeraria.UI
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.pnlLinea = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
+=======
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             this.pnlMenu.SuspendLayout();
             this.pnlContenido.SuspendLayout();
@@ -116,7 +129,11 @@ namespace UTN.Winform.Funeraria.UI
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).BeginInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
@@ -290,6 +307,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.Text = "Detalle";
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // txtIdActivo
             // 
             this.txtIdActivo.Enabled = false;
@@ -309,6 +327,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // pbImage
 =======
+=======
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             // txtCosto
             // 
             this.txtCosto.DecimalPlaces = 2;
@@ -673,6 +693,7 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTCantidad.IsBalloon = true;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // errPro
             // 
             this.errPro.ContainerControl = this;
@@ -684,6 +705,8 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCosto.Size = new System.Drawing.Size(100, 24);
             this.txtCosto.TabIndex = 28;
             this.txtCosto.ValidatingType = typeof(int);
+=======
+            // pbImage
 =======
             // pbImage
             // 
@@ -722,6 +745,42 @@ namespace UTN.Winform.Funeraria.UI
             this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             // 
+            this.pbImage.Image = global::UTN.Winform.Funeraria.Properties.Resources.download;
+            this.pbImage.Location = new System.Drawing.Point(673, 111);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(100, 46);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 25;
+            this.pbImage.TabStop = false;
+            this.pbImage.Tag = "";
+            this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
+            // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGuardar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar2.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar2.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar2.Location = new System.Drawing.Point(856, 78);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGuardar2.Size = new System.Drawing.Size(117, 46);
+            this.btnGuardar2.TabIndex = 20;
+            this.btnGuardar2.Text = "Guardar";
+            this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar2.UseVisualStyleBackColor = false;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
+            // 
+<<<<<<< HEAD
             // txtPrecio
             // 
 <<<<<<< HEAD
@@ -730,6 +789,8 @@ namespace UTN.Winform.Funeraria.UI
             this.txtPrecio.Size = new System.Drawing.Size(100, 24);
             this.txtPrecio.TabIndex = 29;
 =======
+=======
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
@@ -833,6 +894,9 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlLinea.Name = "pnlLinea";
             this.pnlLinea.Size = new System.Drawing.Size(223, 1);
             this.pnlLinea.TabIndex = 23;
+<<<<<<< HEAD
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
+=======
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
             // 
             // frmMantActivo
@@ -856,7 +920,11 @@ namespace UTN.Winform.Funeraria.UI
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVListadoActivos)).EndInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
@@ -925,9 +993,15 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.TextBox txtIdActivo;
         private System.Windows.Forms.Label label1;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.ErrorProvider errPro;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.MaskedTextBox txtCosto;
+=======
+        private System.Windows.Forms.NumericUpDown txtCosto;
+        private System.Windows.Forms.NumericUpDown txtPrecio;
+        private System.Windows.Forms.Panel pnlLinea;
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
         private System.Windows.Forms.NumericUpDown txtCosto;
         private System.Windows.Forms.NumericUpDown txtPrecio;

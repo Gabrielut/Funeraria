@@ -20,9 +20,12 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public byte[] Img { get; set; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         public override string ToString() => $"{Nombre} ";
 
 =======
+=======
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
         internal TipoActivo TipoActivo1
         {
             get => default;
@@ -30,6 +33,9 @@ namespace UTN.Winform.Funeraria.Layers.Entities
             {
             }
         }
+<<<<<<< HEAD
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
+=======
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
     }
 }

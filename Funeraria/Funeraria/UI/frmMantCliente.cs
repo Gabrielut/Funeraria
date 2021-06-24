@@ -252,6 +252,10 @@ namespace UTN.Winform.Funeraria.UI
         {
             // TODO: This line of code loads data into the 'proyectoFunerariaVirgenAngelesDataSet.Cliente' table. You can move, or remove it, as needed.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+           
+>>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
 =======
            
 >>>>>>> parent of 01c6b6d (Merge branch 'main' into Kathy)
