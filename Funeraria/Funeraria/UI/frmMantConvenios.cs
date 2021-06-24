@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace UTN.Winform.Funeraria.UI
 {
-    public partial class frmCotizacion : Form
+    public partial class frmMantConvenios : Form
     {
-        public frmCotizacion()
+        public frmMantConvenios()
         {
             InitializeComponent();
-        }
-
-        private void pnlContenido_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
