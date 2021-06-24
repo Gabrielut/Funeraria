@@ -119,7 +119,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                         Nombre = (dr["Nombre"].ToString()),
                         PrimerApellido = dr["PrimerApellido"].ToString(),
                         SegundoApellido = dr["SegundoApellido"].ToString(),
-                        Sexo = int.Parse(dr["Sexo"].ToString()),
+                        Sexo = (bool)dr["Sexo"],
                         Correo = dr["Correo"].ToString(),
                         Telefono = dr["Telefono"].ToString(),
                         Direccion = dr["Direccion"].ToString(),
@@ -187,7 +187,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                         oCliente.SegundoApellido = dr["SegundoApellido"].ToString();
                         oCliente.Correo = dr["Correo"].ToString();
                         oCliente.Telefono = dr["Telefono"].ToString();
-                        oCliente.Sexo = (int)dr["Sexo"];
+                        oCliente.Sexo = (bool)dr["Sexo"];
                         oCliente.Direccion = dr["Direccion"].ToString();            
                         lista.Add(oCliente);
                     }
@@ -278,7 +278,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                         oCliente.SegundoApellido = dr["SegundoApellido"].ToString();
                         oCliente.Correo = dr["Correo"].ToString();
                         oCliente.Telefono = dr["Telefono"].ToString();
-                        oCliente.Sexo = (int)dr["Sexo"];
+                        oCliente.Sexo = (bool)dr["Sexo"];
                         oCliente.Direccion = dr["Direccion"].ToString();
                         lista.Add(oCliente);
                     }

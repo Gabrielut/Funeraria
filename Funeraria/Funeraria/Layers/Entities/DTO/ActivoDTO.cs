@@ -13,10 +13,11 @@ namespace UTN.Winform.Funeraria.Layers.Entities.DTO
         public string Descripcion { get; set; }
         public string TipoActivo { get; set; }
         public int Cantidad { get; set; }
-        public float Costo { get; set; }
-        public float Precio { get; set; }
+        public string Costo { get; set; }
+        public string Precio { get; set; }
         public string Estado { get; set; }
         public string InformacionAdicional { get; set; }
         public byte[] Img { get; set; }
+        public override string ToString() => $"{Nombre} ";
     }
 }
