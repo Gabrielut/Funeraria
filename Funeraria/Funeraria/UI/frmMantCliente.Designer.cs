@@ -68,14 +68,13 @@ namespace UTN.Winform.Funeraria.UI
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proyectoFunerariaVirgenAngelesDataSet = new UTN.Winform.Funeraria.ProyectoFunerariaVirgenAngelesDataSet();
+           
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new UTN.Winform.Funeraria.ProyectoFunerariaVirgenAngelesDataSetTableAdapters.ClienteTableAdapter();
+          
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoFunerariaVirgenAngelesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();      
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -488,18 +487,16 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // proyectoFunerariaVirgenAngelesDataSet
             // 
-            this.proyectoFunerariaVirgenAngelesDataSet.DataSetName = "ProyectoFunerariaVirgenAngelesDataSet";
-            this.proyectoFunerariaVirgenAngelesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.proyectoFunerariaVirgenAngelesDataSet;
+           
             // 
             // clienteTableAdapter
             // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
+          
             // frmMantCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,8 +514,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoFunerariaVirgenAngelesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();       
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -556,9 +552,9 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblID;
-        private ProyectoFunerariaVirgenAngelesDataSet proyectoFunerariaVirgenAngelesDataSet;
+       
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private ProyectoFunerariaVirgenAngelesDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
+       
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido1;

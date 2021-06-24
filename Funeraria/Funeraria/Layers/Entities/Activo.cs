@@ -19,5 +19,12 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string InformacionAdicional { get; set; }
         public byte[] Img { get; set; }
 
+        internal TipoActivo TipoActivo1
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
