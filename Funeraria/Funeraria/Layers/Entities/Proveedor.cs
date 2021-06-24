@@ -15,7 +15,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string TelProveedor { get; set; }
         public string TelFax { get; set; }
         public string Correo { get; set; }
-        public int IdTipoServicio { get; set; }
+        public TipoServicio IdTipoServicio { get; set; }
         public int CantUni { get; set; }
         public float Precio { get; set; }
         public bool Estado { get; set; }

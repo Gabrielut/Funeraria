@@ -16,16 +16,15 @@ static class Program
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
         frmLogin ofrmLogin = new frmLogin();
-        ofrmLogin.ShowDialog();
+        frmPrincipal ofrmPrincipal = new frmPrincipal();
+        ofrmPrincipal.ShowDialog();
         if (ofrmLogin.DialogResult == DialogResult.OK)
             Application.Run(new frmPrincipal());
-        //frmPrincipal ofrmPrincipal = new frmPrincipal();
-        //ofrmPrincipal.ShowDialog();
+
+        //frmPrincipal ofrmLogin = new frmPrincipal();
+        //ofrmLogin.ShowDialog();
         //if (ofrmLogin.DialogResult == DialogResult.OK)
         //    Application.Run(new frmPrincipal());
-
-
-
 
     }
 
